@@ -1,153 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+<meta charset="UTF-8">
+<title>CareBridge Kids | 康桥儿童健康</title>
 
-    <!-- Basic styling -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-        }
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f7fafc;
+    color: #2d3748;
+  }
 
-        header {
-            background-color: #0b3c5d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+  header {
+    background-color: #1a365d;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
 
-        main {
-            padding: 20px;
-        }
+  .btn {
+    background-color: #f6ad55;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+  }
 
-        footer {
-            background-color: #000000;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 280px;
+  }
+
+  .card img {
+  width: 220px;       /* fixed width for all images */
+  height: 180px;      /* fixed height for all images */
+  object-fit: contain; /* keep image proportions, no distortion */
+  display: block;
+  margin: 0 auto 10px auto; /* center in card */
+  border-radius: 5px;
+ }
+
+
+
+
+
+  .btn-link {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  footer {
+    background: #edf2f7;
+    padding: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.6;
+  }
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Welcome to CareBridgeKids.org</h1>
-        <p>This is a site to search for children's medical info.</p>
-    </header>
+<header>
+  <div style="max-width:900px;margin:auto;text-align:left;font-size:14px;">
+    CareBridge Kids is a bilingual pediatric health information platform designed to help families access clear, reliable, and trusted health resources for children. The website provides essential pediatric health information in both English and Simplified Chinese, with direct links to official sources such as the CDC and local health departments.<br><br>
 
-    <main>
-        <h2>官方中文疫苗说明书（VIS）疫苗对照表</h2>
-<p>以下疫苗资料由美国疾病控制与预防中心（CDC）提供，并已翻译为简体中文。本网站不修改、不替代官方内容。本内容用于儿童疫苗信息教育目的，仅指引到官方疫苗信息声明（VIS）资源，不提供医疗建议。如需临床指导，请咨询儿科医生。</p>
+    CareBridge Kids aims to support parents and caregivers—especially immigrant families—by improving access to accurate health information while maintaining clarity, safety, and educational integrity. This website is for educational purposes only and does not replace professional medical advice.<br><br>
 
-<table border="1" cellspacing="0" cellpadding="5">
-  <tr>
-    <th>中文名称</th>
-    <th>English Name</th>
-    <th>Official VIS (English)</th>
-    <th>Official VIS (中文)</th>
-  </tr>
-  <tr>
-    <td>百白破疫苗（白喉、破伤风、百日咳）</td>
-    <td>DTaP (Diphtheria, Tetanus, Pertussis)</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/dtap.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_dtap.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>流感嗜血杆菌疫苗</td>
-    <td>Hib (Haemophilus influenzae type b)</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hib.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_hib.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>乙型肝炎疫苗</td>
-    <td>Hepatitis B Vaccine</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hepatitis_b.pdf">English VIS</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_hepatitis_b.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>甲型肝炎疫苗</td>
-    <td>Hepatitis A Vaccine</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hepatitis_b.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_hepatitis_a.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>小儿麻痹症疫苗</td>
-    <td>Polio Vaccine</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/polio_ipv.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_polio_ipv.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>肺炎球菌结合疫苗</td>
-    <td>Pneumococcal Conjugate Vaccine (PCV)</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/pcv.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_pcv.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>脑膜炎球菌ACWY疫苗</td>
-    <td>Meningococcal ACWY</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/meningococcal_acwy.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_meningococcal.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>B群脑膜炎双球菌</td>
-    <td>Meningococcal B</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/meningococcal_b.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_meningococcal_b.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>麻疹、腮腺炎、风疹疫苗</td>
-    <td>MMR (Measles, Mumps, Rubella)</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/mmr.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_mmr.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>水痘疫苗</td>
-    <td>Varicella (Chickenpox)</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/varicella.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_varicella.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>流感疫苗</td>
-    <td>Influenza Vaccine</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/flu_inactive.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_flu_live.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>呼吸道合胞病毒疫苗</td>
-    <td>RSV Vaccine</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/rsv.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_rsv.pdf">简体中文 VIS</a></td>
-  </tr>
-  <tr>
-    <td>人乳头瘤病毒疫苗</td>
-    <td>HPV (Human Papillomavirus)</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hpv.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_hpv.pdf">简体中文 VIS</a></td>
-  </tr>
-    <td>多联疫苗</td>
-    <td>Multi-Vaccine</td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/multi_vaccine_infants.pdf">English VIS</a></td>
-    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_multi_vaccine_infants.pdf">简体中文 VIS</a></td>
-  </tr>
-</table>
-    </main>
+    康桥儿童健康是一个中英文双语的儿童健康信息平台，致力于帮助家庭更便捷地获取清晰、可靠、权威的儿童健康资源。网站提供英文与简体中文对照的儿童健康信息，并链接至美国 CDC 及当地卫生部门等官方来源。<br><br>
 
-    <footer>
-        <p>© 2026 My Website</p>
-    </footer>
+    康桥儿童健康旨在支持家长与照护者，特别是移民家庭，提高获取准确儿童健康信息的可及性。本网站仅用于健康教育，不可替代专业医疗建议。
+  </div>
+
+  <br>
+  <a href="#" class="btn">CareBridge Kids / 康桥儿童健康</a>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/Vaccine.png" alt="Vaccine Comparison">
+    <h3>疫苗名称对比/官方中文疫苗说明书（CDC)</h3>
+    <p>Vaccine Name Comparison/Vaccine Information Statement (VIS)</p>
+    <a href="/names" class="btn-link">查看列表 View List →</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/requirement.jpg" alt="Immunization Requirements">
+    <h3>纽约市和纽约州学校疫苗接种要求</h3>
+    <p>NY School Immunization Requirements</p>
+
+    <a href="https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/health-and-wellness/38995-immunization-requirements-and-letter-for-sy26-chinese-simplified.pdf" class="btn-link">纽约市学校疫苗接种要求</a><br>
+    <a href="https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/health-and-wellness/immunization-requirements-and-letter-for-school-year-2025-26.pdf" class="btn-link">NYC School Immunization Requirements</a><br>
+    <a href="https://www.health.ny.gov/publications/17377.pdf" class="btn-link">纽约州学校（长岛和纽约上州）免疫接种要求</a><br>
+    <a href="https://www.health.ny.gov/publications/2370.pdf" class="btn-link">NYS Immunization Requirements</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/school%20form%203.jpg" alt="School Health Forms">
+    <h3>纽约市和纽约州学校入学健康表格</h3>
+    <p>NY School Health Examination Form</p>
+
+    <a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/health-and-wellness/ch205-child-adolescent-health-examination-form-2025-26.pdf" class="btn-link">(纽约市表格 205)NYC Health Examination Form</a><br>
+    <a href="https://www.nysed.gov/sites/default/files/programs/student-support-services/health-exam-form.pdf" class="btn-link"> (纽约长岛和纽约上州学校表格) NYS Health Examination Form</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/Fever%20reducer.png" alt="Fever Medication">
+    <h3>退烧药用量</h3>
+    <p>Fever Medication Dosage</p>
+
+    <a href="https://downloads.aap.org/HC/EN/Acetaminophen_Pictographic_Dosing_Chart_download.pdf" class="btn-link">(泰诺) Acetaminophen / Tylenol</a><br>
+    <a href="https://downloads.aap.org/HC/EN/Dosing-Chart-Ibuprofen-updated2023.pdf" class="btn-link">(布洛芬) Ibuprofen / Motrin</a>
+  </div>
+
+</div>
+
+<footer>
+  © CareBridge Kids | 康桥儿童健康<br><br>
+
+  Educational Use Only | Disclaimer | 免责声明<br><br>
+
+  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+
+  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
+</footer>
 
 </body>
 </html>
- 
-
 
 
 
