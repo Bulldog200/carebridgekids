@@ -56,26 +56,27 @@
   border-radius: 5px;
  }
 
+.small-h3 {
+  font-size: 18px; /* adjust smaller; default <h3> is usually ~24px */
+  line-height: 1.3; /* optional, keeps spacing neat */
+}
 
+.btn-link {
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 6px;
+}
 
-
-
-  .btn-link {
-    color: #2563eb;
-    font-weight: bold;
-    text-decoration: underline;
-    display: inline-block;
-    margin-top: 6px;
-  }
-
-  footer {
-    background: #edf2f7;
-    padding: 30px;
-    font-size: 10px;
-    text-align: center;
-    margin-top: 40px;
-    line-height: 1.6;
-  }
+footer {
+  background: #edf2f7;
+  padding: 30px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 1.6;
+}
 </style>
 </head>
 
@@ -95,7 +96,7 @@
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/Vaccine.png" alt="Vaccine Comparison">
-    <h3>疫苗中英文名称 | 官方中文疫苗说明书</h3>
+    <h3 class="small-h3">疫苗中英文名称 | 官方中文疫苗说明书</h3>
     <p>Vaccine Name Comparison/Vaccine Information Statement (VIS)</p>
     <a href="/VIS.html" class="btn-link">点击查看中英文版权威疫苗指南 | Click to view authoritative vaccine guidance in English and Chinese</a>
   </div>
@@ -147,6 +148,7 @@
 
 </body>
 </html>
+
 
 
 
