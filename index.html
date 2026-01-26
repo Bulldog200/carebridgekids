@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>CareBridge Kids | 康桥儿童健康</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
   body {
     font-family: 'Segoe UI', sans-serif;
@@ -15,101 +17,111 @@
   header {
     background-color: #1a365d;
     color: white;
-    padding: 15px 5px;
+    padding: 24px 16px;
     text-align: center;
+  }
+
+  .brand-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 5px 0 10px;
   }
 
   .btn {
     background-color: #f6ad55;
     color: white;
-    padding: 8px 16px;
+    padding: 10px 18px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     display: inline-block;
+    margin-top: 10px;
   }
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
     text-align: center;
   }
 
   .card {
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 300px;
   }
 
   .card img {
-  width: 220px;       /* fixed width for all images */
-  height: 180px;      /* fixed height for all images */
-  object-fit: contain; /* keep image proportions, no distortion */
-  display: block;
-  margin: 0 auto 10px auto; /* center in card */
-  border-radius: 5px;
- }
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+    border-radius: 6px;
+  }
 
-.small-h3 {
-  font-size: 16px; /* adjust smaller; default <h3> is usually ~24px */
-  line-height: 1.3; /* optional, keeps spacing neat */
-}
+  .small-h3 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
 
-.brand-title {
-  font-size: 32px;   /* make it bigger */
-  font-weight: 700;
-  margin-bottom: 10px;
-  margin-top: 3px;
-}
+  .btn-link {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 14px;
+  }
 
-.btn-link {
-  color: #2563eb;
-  font-weight: bold;
-  text-decoration: underline;
-  display: inline-block;
-  margin-top: 6px;
-}
+  footer {
+    background: #edf2f7;
+    padding: 20px 12px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.4;
+  }
 
-footer {
-  background: #edf2f7;
-  padding: 30px;
-  font-size: 10px;
-  text-align: center;
-  margin-top: 20px;
-  line-height: 1.4;
-}
+  @media (min-width: 768px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 </style>
 </head>
 
 <body>
 
 <header>
-  <h3 class="brand-title">
-    康桥儿童健康 | CareBridge Kids
-  </h3>
-  <p>
-    中英双语儿童健康信息平台
-  </p>
+  <h3 class="brand-title">康桥儿童健康 | CareBridge Kids</h3>
+  <p>中英双语儿童健康信息平台</p>
   <p>可信赖 · 权威 · 给家长用的儿童健康信息</p>
-  <p>Clear, trusted pediatric health information for families
-  </p>
+  <p>Clear, trusted pediatric health information for families</p>
   <a href="/aboutmepage.html" class="btn">了解我们 / About Us</a>
 </header>
 
-  
 <div class="container">
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/Vaccine.png" alt="Vaccine Comparison">
     <h3 class="small-h3">疫苗中英文名称 | 官方中文疫苗说明书</h3>
-    <p>Vaccine Name Comparison/Vaccine Information Statement (VIS)</p>
-    <a href="/VIS.html" class="btn-link">点击查看中英文版权威疫苗指南 | Click to view authoritative vaccine guidance in English and Chinese</a>
+    <p>Vaccine Name Comparison / Vaccine Information Statement (VIS)</p>
+    <a href="/VIS.html" class="btn-link">
+      点击查看中英文版权威疫苗指南 | Click to view authoritative vaccine guidance
+    </a>
   </div>
 
   <div class="card">
@@ -117,10 +129,21 @@ footer {
     <h3>纽约市和纽约州学校疫苗接种要求</h3>
     <p>NY School Immunization Requirements</p>
 
-    <a href="https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/health-and-wellness/38995-immunization-requirements-and-letter-for-sy26-chinese-simplified.pdf" class="btn-link">纽约市学校疫苗接种要求</a><br>
-    <a href="https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/health-and-wellness/immunization-requirements-and-letter-for-school-year-2025-26.pdf" class="btn-link">NYC School Immunization Requirements</a><br>
-    <a href="https://www.health.ny.gov/publications/17377.pdf" class="btn-link">纽约长岛和纽约上州学校免疫接种要求</a><br>
-    <a href="https://www.health.ny.gov/publications/2370.pdf" class="btn-link">NYS Immunization Requirements</a>
+    <a href="https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/health-and-wellness/38995-immunization-requirements-and-letter-for-sy26-chinese-simplified.pdf" class="btn-link">
+      纽约市学校疫苗接种要求
+    </a><br>
+
+    <a href="https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/default-document-library/health-and-wellness/immunization-requirements-and-letter-for-school-year-2025-26.pdf" class="btn-link">
+      NYC School Immunization Requirements
+    </a><br>
+
+    <a href="https://www.health.ny.gov/publications/17377.pdf" class="btn-link">
+      纽约长岛和纽约上州学校免疫接种要求
+    </a><br>
+
+    <a href="https://www.health.ny.gov/publications/2370.pdf" class="btn-link">
+      NYS Immunization Requirements
+    </a>
   </div>
 
   <div class="card">
@@ -128,8 +151,13 @@ footer {
     <h3>纽约市和纽约州学校入学健康表格</h3>
     <p>NY School Health Examination Form</p>
 
-    <a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/health-and-wellness/ch205-child-adolescent-health-examination-form-2025-26.pdf" class="btn-link">(纽约市表格 205)NYC Health Examination Form</a><br>
-    <a href="https://www.nysed.gov/sites/default/files/programs/student-support-services/health-exam-form.pdf" class="btn-link"> (纽约长岛和纽约上州学校表格) NYS Health Examination Form</a>
+    <a href="https://www.schools.nyc.gov/docs/default-source/default-document-library/health-and-wellness/ch205-child-adolescent-health-examination-form-2025-26.pdf" class="btn-link">
+      (纽约市表格 205) NYC Health Examination Form
+    </a><br>
+
+    <a href="https://www.nysed.gov/sites/default/files/programs/student-support-services/health-exam-form.pdf" class="btn-link">
+      (纽约长岛和纽约上州学校表格) NYS Health Examination Form
+    </a>
   </div>
 
   <div class="card">
@@ -137,98 +165,23 @@ footer {
     <h3>退烧药用量</h3>
     <p>Fever Medication Dosage</p>
 
-    <a href="https://downloads.aap.org/HC/EN/Acetaminophen_Pictographic_Dosing_Chart_download.pdf" class="btn-link">(泰诺) Acetaminophen / Tylenol</a><br>
-    <a href="https://downloads.aap.org/HC/EN/Dosing-Chart-Ibuprofen-updated2023.pdf" class="btn-link">(布洛芬) Ibuprofen / Motrin</a>
+    <a href="https://downloads.aap.org/HC/EN/Acetaminophen_Pictographic_Dosing_Chart_download.pdf" class="btn-link">
+      (泰诺) Acetaminophen / Tylenol
+    </a><br>
+
+    <a href="https://downloads.aap.org/HC/EN/Dosing-Chart-Ibuprofen-updated2023.pdf" class="btn-link">
+      (布洛芬) Ibuprofen / Motrin
+    </a>
   </div>
 
 </div>
 
 <footer>
-  <a href="https://librecounter.org/referer/show" target="_blank"></a>
-  <img src="https://librecounter.org/oldStyle.svg" referrerPolicy="unsafe-url" /><br></br>
   © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-
   Educational Use Only | Disclaimer | 免责声明<br><br>
-
-  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
-
-  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
- <!--<img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/qrcodecbo.png" height = "120px" width = "120px" alt="QR Code" style = "float: right; margin-top: -250px">-->
+  This website provides general pediatric health information for educational purposes only.<br><br>
+  本网站提供的内容仅用于儿童健康教育，不构成医疗建议。
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
