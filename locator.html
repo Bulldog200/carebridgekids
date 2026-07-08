@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>附近的儿科诊所 | Find Care Near You | CareBridge Kids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f7fafc;
+    color: #2d3748;
+  }
+  header {
+    background-color: #1a365d;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  header h1 { font-size: 24px; margin: 0 0 6px; }
+  header p { margin: 4px 0; opacity: 0.9; font-size: 14px; }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+
+  .search-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  select, input, button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+    font-size: 15px;
+  }
+
+  input {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .btn {
+    background-color: #f6ad55;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btn:hover { background-color: #ed8936; }
+
+  .map-frame {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .hint {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background: #edf2f7;
+    padding: 20px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>查找附近的儿童医疗资源 | Find Nearby Pediatric Care</h1>
+  <p>输入您的城市或邮编，查找附近的儿科诊所、疫苗接种点或药房</p>
+  <p>Enter your city or ZIP code to find nearby pediatricians, vaccine clinics, or pharmacies</p>
+</header>
+
+<main>
+  <div class="search-box">
+    <select id="careType">
+      <option value="pediatrician">儿科诊所 / Pediatrician</option>
+      <option value="pharmacy">药房 / Pharmacy</option>
+      <option value="hospital">医院 / Hospital</option>
+      <option value="urgent+care">急诊中心 / Urgent Care</option>
+      <option value="vaccine+clinic">疫苗接种点 / Vaccine Clinic</option>
+    </select>
+    <input type="text" id="location" placeholder="城市或邮编 / City or ZIP code (e.g. Flushing, NY)">
+    <button class="btn" id="searchBtn">🔍 搜索 / Search</button>
+  </div>
+
+  <p class="hint">Results open below using Google Maps' own search — no account or API key required.</p>
+
+  <iframe
+    id="mapFrame"
+    class="map-frame"
+    src="https://www.google.com/maps?q=pediatrician&output=embed">
+  </iframe>
+</main>
+
+<footer>
+  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
+  Map results are provided directly by Google Maps. CareBridge Kids does not verify or endorse individual providers listed.<br>
+  地图搜索结果由 Google 地图直接提供。康桥儿童健康不对列表中的具体医疗机构进行核实或背书。
+</footer>
+
+<!--
+  ============================================================
+  HOW THIS WORKS — no API key, no billing, no Cloud account
+  ============================================================
+  This just builds a Google Maps "search" URL and drops it into
+  an <iframe>, the same as if a user typed a search into
+  google.com/maps themselves. Google handles the search,
+  the pins, the ratings, everything — for free, with no key.
+
+  Limitation vs. the API version: it can't auto-detect the
+  user's exact GPS location for a true "near me" search — the
+  user has to type a city, neighborhood, or ZIP code. For most
+  parents looking up "pediatrician near Flushing, NY" that's
+  perfectly natural anyway.
+  ============================================================
+-->
+<script>
+  document.getElementById("searchBtn").addEventListener("click", function () {
+    const type = document.getElementById("careType").value;
+    const location = document.getElementById("location").value.trim();
+
+    const query = location
+      ? `${type} near ${location}`
+      : type;
+
+    const encodedQuery = encodeURIComponent(query);
+    document.getElementById("mapFrame").src =
+      `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+  });
+
+  // Also allow pressing Enter in the input field
+  document.getElementById("location").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      document.getElementById("searchBtn").click();
+    }
+  });
+</script>
+
+</body>
+</html>
