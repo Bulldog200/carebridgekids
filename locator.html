@@ -120,22 +120,6 @@
   地图搜索结果由 Google 地图直接提供。康桥儿童健康不对列表中的具体医疗机构进行核实或背书。
 </footer>
 
-<!--
-  ============================================================
-  HOW THIS WORKS — no API key, no billing, no Cloud account
-  ============================================================
-  This just builds a Google Maps "search" URL and drops it into
-  an <iframe>, the same as if a user typed a search into
-  google.com/maps themselves. Google handles the search,
-  the pins, the ratings, everything — for free, with no key.
-
-  Limitation vs. the API version: it can't auto-detect the
-  user's exact GPS location for a true "near me" search — the
-  user has to type a city, neighborhood, or ZIP code. For most
-  parents looking up "pediatrician near Flushing, NY" that's
-  perfectly natural anyway.
-  ============================================================
--->
 <script>
   document.getElementById("searchBtn").addEventListener("click", function () {
     const type = document.getElementById("careType").value;
@@ -150,7 +134,7 @@
       `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
   });
 
-  // Also allow pressing Enter in the input field
+
   document.getElementById("location").addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       document.getElementById("searchBtn").click();
