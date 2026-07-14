@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>附近的儿科诊所 | Find Care Near You | CareBridge Kids</title>
+<title>附近的医疗资源 | Find Care Near You | CareBridge Kids</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -87,19 +87,17 @@
 <body>
 
 <header>
-  <h1>查找附近的儿童医疗资源 | Find Nearby Pediatric Care</h1>
-  <p>输入您的城市或邮编，查找附近的儿科诊所、疫苗接种点或药房</p>
-  <p>Enter your city or ZIP code to find nearby pediatricians, vaccine clinics, or pharmacies</p>
+  <h1>查找附近的医院、急诊中心和药房 | Find Nearby Hospitals, Urgent Care & Pharmacies</h1>
+  <p>输入您的城市或邮编，查找附近的医院、急诊中心或药房</p>
+  <p>Enter your city or ZIP code to find nearby hospitals, urgent care centers, or pharmacies</p>
 </header>
 
 <main>
   <div class="search-box">
     <select id="careType">
-      <option value="pediatrician">儿科诊所 / Pediatrician</option>
-      <option value="pharmacy">药房 / Pharmacy</option>
       <option value="hospital">医院 / Hospital</option>
       <option value="urgent+care">急诊中心 / Urgent Care</option>
-      <option value="vaccine+clinic">疫苗接种点 / Vaccine Clinic</option>
+      <option value="pharmacy">药房 / Pharmacy</option>
     </select>
     <input type="text" id="location" placeholder="城市或邮编 / City or ZIP code (e.g. Flushing, NY)">
     <button class="btn" id="searchBtn">🔍 搜索 / Search</button>
@@ -110,7 +108,7 @@
   <iframe
     id="mapFrame"
     class="map-frame"
-    src="https://www.google.com/maps?q=pediatrician&output=embed">
+    src="https://www.google.com/maps?q=hospital&output=embed">
   </iframe>
 </main>
 
