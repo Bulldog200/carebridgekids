@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>儿童年龄检查器 | Age & Care Checker | CareBridge Kids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f7fafc;
+    color: #2d3748;
+  }
+  header {
+    background-color: #1a365d;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  header h1 { font-size: 24px; margin: 0 0 6px; }
+  header p { margin: 4px 0; opacity: 0.9; font-size: 14px; }
+
+  .btn {
+    background-color: #f6ad55;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { background-color: #ed8936; }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+
+  .search-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  select, input {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+    font-size: 15px;
+  }
+
+  input {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .field-label {
+    font-size: 13px;
+    color: #718096;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hint {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 10px;
+  }
+
+  .result-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .result-card h2 {
+    color: #1a365d;
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .result-card ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    line-height: 1.7;
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    color: #718096;
+    border-top: 1px solid #edf2f7;
+    padding-top: 10px;
+    margin-top: 14px;
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 420px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  footer {
+    background: #edf2f7;
+    padding: 20px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>儿童年龄检查器 | Child Age &amp; Care Checker</h1>
+  <p>输入孩子的年龄和所在地，查看该年龄段通常建议的疫苗/检查，并查找附近的医疗资源</p>
+  <p>Enter your child's age and location to see typically recommended vaccines/checkups for that age, and find nearby care</p>
+</header>
+
+<main>
+  <div class="search-box">
+    <div class="field">
+      <label class="field-label">年龄 / Age</label>
+      <input type="number" id="ageValue" min="0" placeholder="e.g. 15" style="min-width:100px;">
+    </div>
+    <div class="field">
+      <label class="field-label">单位 / Unit</label>
+      <select id="ageUnit">
+        <option value="months">月 / Months</option>
+        <option value="years" selected>岁 / Years</option>
+      </select>
+    </div>
+    <div class="field" style="flex:1;">
+      <label class="field-label">城市或邮编 / City or ZIP code</label>
+      <input type="text" id="location" placeholder="e.g. Flushing, NY">
+    </div>
+    <div class="field">
+      <label class="field-label">附近查找 / Find nearby</label>
+      <select id="careType">
+        <option value="pediatrician" selected>儿科诊所 / Pediatrician</option>
+        <option value="hospital">医院 / Hospital</option>
+        <option value="urgent+care">急诊中心 / Urgent Care</option>
+        <option value="pharmacy">药房 / Pharmacy</option>
+      </select>
+    </div>
+    <button class="btn" id="checkBtn" style="align-self:flex-end;">✅ 查看 / Check</button>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <h2 id="resultTitleZh"></h2>
+    <h2 id="resultTitleEn" style="font-size:15px; color:#4a5568; margin-top:-8px;"></h2>
+    <ul id="resultList"></ul>
+    <div class="disclaimer">
+      以上信息基于美国CDC儿童及青少年常规疫苗接种时间表整理，仅供参考，具体接种安排请以医生建议为准。<br>
+      This overview is based on the general CDC childhood/adolescent immunization schedule and is for reference only — always confirm the exact schedule with your child's pediatrician. See the
+      <a href="https://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent.html" target="_blank" rel="noopener">official CDC immunization schedule</a> for the authoritative, up-to-date version.
+    </div>
+  </div>
+
+  <p class="hint" id="mapHint" style="display:none;">Results open below using Google Maps</p>
+  <iframe id="mapFrame" class="map-frame"></iframe>
+</main>
+
+<footer>
+  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
+  Map results are provided directly by Google Maps. CareBridge Kids does not verify or endorse individual providers listed.<br>
+  地图搜索结果由 Google 地图直接提供。康桥儿童健康不对列表中的具体医疗机构进行核实或背书。<br><br>
+  This tool provides general educational information only and does not offer medical advice, diagnosis, or treatment.<br>
+  本工具仅提供一般教育信息，不构成医疗建议、诊断或治疗。
+</footer>
+
+<script>
+  // Age brackets in total months, based on the general CDC child/adolescent schedule.
+  const AGE_BRACKETS = [
+    { max: 0,   zh: "出生时",        en: "Birth",
+      items: [["乙肝疫苗第1剂","Hepatitis B (HepB) - dose 1"]] },
+    { max: 2,   zh: "1–2月龄",       en: "1–2 months",
+      items: [["乙肝疫苗第2剂","HepB - dose 2"]] },
+    { max: 3,   zh: "2月龄",         en: "2 months",
+      items: [["百白破 (DTaP)","DTaP"],["流感嗜血杆菌 (Hib)","Hib"],["脊灰疫苗 (IPV)","IPV (Polio)"],["肺炎球菌疫苗 (PCV)","PCV"],["轮状病毒疫苗 (RV)","Rotavirus"]] },
+    { max: 5,   zh: "4月龄",         en: "4 months",
+      items: [["百白破 (DTaP) 第2剂","DTaP - dose 2"],["Hib 第2剂","Hib - dose 2"],["IPV 第2剂","IPV - dose 2"],["PCV 第2剂","PCV - dose 2"],["轮状病毒疫苗第2剂","Rotavirus - dose 2"]] },
+    { max: 11,  zh: "6–11月龄",      en: "6–11 months",
+      items: [["百白破、Hib、PCV 第3剂","DTaP, Hib, PCV - dose 3"],["乙肝疫苗第3剂","HepB - dose 3"],["每年一次流感疫苗 (6月龄起)","Annual flu vaccine (from 6 months)"]] },
+    { max: 15,  zh: "12–15月龄",     en: "12–15 months",
+      items: [["麻腮风疫苗 (MMR)","MMR"],["水痘疫苗","Varicella"],["甲肝疫苗 (HepA) 第1剂","Hepatitis A - dose 1"],["Hib 及 PCV 加强针","Hib and PCV boosters"]] },
+    { max: 23,  zh: "16–23月龄",     en: "16–23 months",
+      items: [["百白破 (DTaP) 加强针","DTaP booster"],["甲肝疫苗第2剂 (与第1剂间隔6个月以上)","HepA - dose 2 (6+ months after dose 1)"]] },
+    { max: 47,  zh: "2–3岁",         en: "2–3 years",
+      items: [["常规体检","Routine well-child checkup"],["每年一次流感疫苗","Annual flu vaccine"],["补种未完成的疫苗","Catch up on any missed doses"]] },
+    { max: 71,  zh: "4–6岁 (入学前)", en: "4–6 years (school entry)",
+      items: [["百白破 (DTaP) 第5剂","DTaP - dose 5"],["IPV 加强针","IPV booster"],["MMR 第2剂","MMR - dose 2"],["水痘疫苗第2剂","Varicella - dose 2"]] },
+    { max: 131, zh: "7–11岁",        en: "7–11 years",
+      items: [["常规体检","Routine well-child checkup"],["每年一次流感疫苗","Annual flu vaccine"]] },
+    { max: 155, zh: "11–12岁",       en: "11–12 years",
+      items: [["百白破加强针 (Tdap)","Tdap"],["HPV 疫苗 (2剂系列)","HPV vaccine (2-dose series)"],["脑膜炎球菌疫苗 (MenACWY)","MenACWY"]] },
+    { max: 191, zh: "13–15岁",       en: "13–15 years",
+      items: [["如未完成，补种HPV疫苗","Complete HPV series if not finished"],["每年一次流感疫苗","Annual flu vaccine"]] },
+    { max: 203, zh: "16岁",          en: "16 years",
+      items: [["脑膜炎球菌疫苗加强针 (MenACWY)","MenACWY booster"]] },
+    { max: 216, zh: "17–18岁",       en: "17–18 years",
+      items: [["脑膜炎B疫苗 (MenB，与医生共同决定)","MenB (shared clinical decision with provider)"],["常规体检","Routine checkup"]] },
+    { max: Infinity, zh: "18岁以上", en: "Over 18",
+      items: [["请咨询家庭医生或全科医生以获取成人疫苗建议","Consult a family or primary care doctor for adult vaccine recommendations"]] }
+  ];
+
+  function findBracket(totalMonths) {
+    for (const b of AGE_BRACKETS) {
+      if (totalMonths <= b.max) return b;
+    }
+    return AGE_BRACKETS[AGE_BRACKETS.length - 1];
+  }
+
+  document.getElementById("checkBtn").addEventListener("click", function () {
+    const ageValueRaw = document.getElementById("ageValue").value;
+    const unit = document.getElementById("ageUnit").value;
+    const location = document.getElementById("location").value.trim();
+    const careType = document.getElementById("careType").value;
+
+    if (ageValueRaw !== "" && !isNaN(ageValueRaw)) {
+      const ageValue = parseFloat(ageValueRaw);
+      const totalMonths = unit === "years" ? ageValue * 12 : ageValue;
+      const bracket = findBracket(totalMonths);
+
+      document.getElementById("resultTitleZh").textContent = bracket.zh + " 通常建议：";
+      document.getElementById("resultTitleEn").textContent = "Typically recommended around " + bracket.en + ":";
+
+      const list = document.getElementById("resultList");
+      list.innerHTML = "";
+      bracket.items.forEach(([zh, en]) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${zh} <span style="color:#718096;">/ ${en}</span>`;
+        list.appendChild(li);
+      });
+
+      document.getElementById("resultCard").style.display = "block";
+    }
+
+    const query = location ? `${careType} near ${location}` : careType;
+    const encodedQuery = encodeURIComponent(query);
+    const mapFrame = document.getElementById("mapFrame");
+    mapFrame.src = `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+    mapFrame.style.display = "block";
+    document.getElementById("mapHint").style.display = "block";
+  });
+
+  document.getElementById("location").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      document.getElementById("checkBtn").click();
+    }
+  });
+</script>
+
+</body>
+</html>
