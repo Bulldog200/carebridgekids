@@ -1,112 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us | CareBridge Kids</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f7fafc;
-      color: #2d3748;
-      line-height: 1.6;
-    }
-    footer {
-      background: #edf2f7;
-      padding: 15px;
-      font-size: 9px;
-      text-align: center;
-      margin-top: 40px;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #1a365d;
-      color: white;
-      padding: 15px 20px;
-      text-align: center;
-    }
-    .btn {
-      background-color: #f6ad55;
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 16px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    img {
-      max-width: 500px;   /* adjust size here */
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px; /* center it + spacing */
-    }
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W4ZG0SW575');
+</script>
+<title>About Us | CareBridge Kids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+<style>
+:root {
+  --ink: #1a1a1a;
+  --muted: #5b5f66;
+  --blue: #2b6cb0;
+  --blue-pale: #eef2f7;
+  --red: #c8134f;
+  --red-dark: #a10f40;
+  --line: #e2e4e8;
+}
 
-    section {
-      margin-bottom: 40px;
-    }
+* { box-sizing: border-box; }
 
-    h2 {
-      color: #1a365d;
-      margin-bottom: 10px;
+body {
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .brand-name {
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+a { color: var(--blue); }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.brand-name span {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lang-toggle {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+}
+.btn-outline:hover { background: #f3f4f6; }
+
+.btn-outline-red {
+  border: 1px solid var(--red);
+  color: var(--red);
+  background: transparent;
+}
+.btn-outline-red:hover { background: #fdecf1; }
+
+.btn-fill {
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  color: white;
+}
+.btn-fill:hover { background: #235a91; border-color: #235a91; }
+
+.btn-fill-red {
+  border: 1px solid var(--red);
+  background: var(--red);
+  color: white;
+}
+.btn-fill-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+.btn-fill-white {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+nav.main-nav {
+  background: #f7f8fa;
+  border-bottom: 1px solid var(--line);
+}
+nav.main-nav ul {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+  list-style: none;
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+nav.main-nav a {
+  display: block;
+  padding: 13px 0;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13.5px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+nav.main-nav a:hover {
+  color: var(--red);
+}
+
+.page-header {
+  background: var(--red);
+  color: white;
+  padding: 46px 32px;
+  text-align: center;
+}
+.page-header h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.page-header p {
+  color: #fbdce6;
+  font-size: 14px;
+  max-width: 640px;
+  margin: 4px auto 0;
+  line-height: 1.6;
+}
+
+footer {
+  background: #16305a;
+  color: #cfd9e6;
+  padding: 32px 32px;
+  font-size: 10.5px;
+  text-align: center;
+  line-height: 1.7;
+  font-weight: 400;
+}
+footer a { color: #cfd9e6; }
+
+@media (max-width: 720px) {
+  .topbar {
+    padding: 14px 18px;
+    justify-content: center;
+    text-align: center;
+  }
+  .topbar-right {
+    width: 100%;
+    justify-content: center;
+  }
+  nav.main-nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 18px;
+    gap: 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .page-header {
+    padding: 34px 20px;
+  }
+  .page-header h1 {
+    font-size: 21px;
+  }
+  footer {
+    padding: 26px 18px;
+  }
+}
+
+  .page-main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 52px 32px 64px;
+  }
+  .page-main img {
+    width: 100%;
+    max-width: 460px;
+    display: block;
+    margin: 0 auto 34px;
+    border-radius: 4px;
+  }
+  .page-main section {
+    margin-bottom: 34px;
+  }
+  .page-main h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .page-main p {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+  @media (max-width: 720px) {
+    .page-main {
+      padding: 36px 20px 48px;
     }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>关于我们 | About Us</h1>
-    <a href="/index.html" class="btn">首页 / Home</a>
-  </header>
+<div class="topbar">
+  <div class="brand-name">
+    康桥儿童健康 | CareBridge Kids
+    <span>CAREBRIDGE KIDS</span>
+  </div>
+  <div class="topbar-right">
+    <span class="lang-toggle">EN | 中文</span>
+    <a href="aboutmepage.html" class="btn btn-fill">关于我们 / About Us</a>
+    <a href="locator.html" class="btn btn-fill-red">查找附近医疗 / Find Care</a>
+  </div>
+</div>
 
-  <main>
-    <section>
-      <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/family.jpg" alt="CareBridgeKids">
-      <h3>我们的使命</h3>
-      <p>
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">首页 Home</a></li>
+    <li><a href="VIS.html">疫苗指南 Vaccine Guide</a></li>
+    <li><a href="requirements.html">入学要求 Requirements</a></li>
+    <li><a href="healthforms.html">健康表格 Health Forms</a></li>
+    <li><a href="fevermeds.html">退烧用药 Fever Meds</a></li>
+    <li><a href="locator.html">附近医疗 Find Care</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>关于我们 | About Us</h1>
+  <p>康桥儿童健康 | CareBridge Kids</p>
+</div>
+
+<div class="page-main">
+  <img src="https://images.pexels.com/photos/5094084/pexels-photo-5094084.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mother and daughter sharing a joyful moment at home">
+
+  <section>
+    <h2>我们的使命</h2>
+    <p>
 许多家庭在获取关键儿童健康信息时，面临语言和文化的隔阂。康桥儿童健康正是为弥合这一鸿沟而创立。我们是一个中英文双语儿童健康信息平台，致力于帮助家长与照护者——尤其是移民及多语言家庭——清晰、便捷地获取源自权威机构的健康知识。我们系统地整合并链接来自美国疾病控制与预防中心(CDC)、美国儿科学会(AAP)及纽约市/州卫生部门等官方信源的信息。
 康桥儿童健康是一个独立的教育项目，旨在提供可靠信息，不能替代专业医生的诊断与建议。
 
 清晰沟通，科学养育。
-    </section>
+    </p>
+  </section>
 
-    <section>
-    <h3>Our Mission</h3>
-        <p>
-            Many families face language barriers when accessing pediatric health information. CareBridge Kids was created to help bridge that gap.
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      Many families face language barriers when accessing pediatric health information. CareBridge Kids was created to help bridge that gap.
+    </p>
+    <p>
+      CareBridge Kids is a bilingual pediatric health information platform that supports parents and caregivers — especially immigrant and multilingual families — by providing clear, reliable, and trusted children's health resources in both English and Simplified Chinese.
+    </p>
+    <p>
+      The website organizes essential pediatric health information with direct links to official sources, including the U.S. Centers for Disease Control and Prevention (CDC), the American Academy of Pediatrics (AAP), and New York City and New York State health departments.
+    </p>
+    <p>
+      CareBridge Kids is an independent educational project and does not replace professional medical advice.
+    </p>
+  </section>
+</div>
 
-
-
-            CareBridge Kids is a bilingual pediatric health information platform that supports parents and caregivers—especially immigrant and multilingual families—by providing clear, reliable, and trusted children's health resources in both English and Simplified Chinese.
-
-
-
-            The website organizes essential pediatric health information with direct links to official sources, including the U.S. Centers for Disease Control and Prevention (CDC), the American Academy of Pediatrics (AAP), and New York City and New York State health departments.
-
-
-
-            CareBridge Kids is an independent educational project and does not replace professional medical advice.
-        </p>
-    </section>
-  </main>
-
-  <footer>
+<footer>
   © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-
   Educational Use Only | Disclaimer | 免责声明<br><br>
-
   This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。<br><br>
+  Photo courtesy of Pexels contributors, used under the free Pexels License.
+</footer>
 
-  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。<br></br>
-  </footer>
 </body>
 </html>

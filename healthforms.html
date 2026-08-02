@@ -9,7 +9,7 @@
   gtag('js', new Date());
   gtag('config', 'G-W4ZG0SW575');
 </script>
-<title>附近的医疗资源 | Find Care Near You | CareBridge Kids</title>
+<title>入学健康表格 | School Health Examination Forms | CareBridge Kids</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -215,55 +215,51 @@ footer a { color: #cfd9e6; }
   footer {
     padding: 26px 18px;
   }
+  .page-main {
+    padding: 28px 18px 48px;
+  }
 }
 
-  .page-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 32px 64px;
-  }
-  .search-box {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 18px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-  }
-  select, input {
-    padding: 10px 14px;
-    border-radius: 4px;
-    border: 1px solid var(--line);
-    font-size: 14px;
-    font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-    color: var(--ink);
-  }
-  input {
-    flex: 1;
-    min-width: 180px;
-  }
-  .hint {
-    font-size: 12.5px;
-    color: var(--muted);
-    margin-bottom: 10px;
-  }
-  .map-frame {
-    width: 100%;
-    height: 440px;
-    border: 1px solid var(--line);
-    border-radius: 4px;
-  }
-  @media (max-width: 720px) {
-    .page-main {
-      padding: 28px 18px 48px;
-    }
-    .map-frame {
-      height: 320px;
-    }
-  }
+.page-main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 44px 32px 64px;
+}
+.page-main > p.intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.doc-list {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.doc-card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.doc-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.doc-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+.doc-card a {
+  flex-shrink: 0;
+}
 </style>
 </head>
 <body>
@@ -292,56 +288,39 @@ footer a { color: #cfd9e6; }
 </nav>
 
 <div class="page-header">
-  <h1>查找附近的医院、急诊中心和药房 | Find Nearby Hospitals, Urgent Care &amp; Pharmacies</h1>
-  <p>输入您的城市或邮编，查找附近的医院、急诊中心或药房 | Enter your city or ZIP code to find nearby hospitals, urgent care centers, or pharmacies</p>
+  <h1>入学健康表格 | School Health Examination Forms</h1>
+  <p>纽约市和纽约州学校入学所需的官方健康检查表格 | Official health examination forms required for NYC and NYS school entry</p>
 </div>
 
 <div class="page-main">
-  <div class="search-box">
-    <select id="careType">
-      <option value="hospital">医院 / Hospital</option>
-      <option value="urgent+care">急诊中心 / Urgent Care</option>
-      <option value="pharmacy">药房 / Pharmacy</option>
-    </select>
-    <input type="text" id="location" placeholder="城市或邮编 / City or ZIP code (e.g. Flushing, NY)">
-    <button class="btn btn-fill-red" id="searchBtn">搜索 / Search</button>
+  <p class="intro">以下健康检查表格由纽约市教育局及纽约州教育部直接提供，需由医生填写后提交学校。本网站不修改、不替代官方内容，仅提供直接链接方便家长查阅。</p>
+  <p class="intro">The following health examination forms are provided directly by the NYC Department of Education and NYS Education Department, and must be completed by a physician before submission to school. This website does not modify or replace official content — links are provided for convenience only.</p>
+
+  <div class="doc-list">
+    <div class="doc-card">
+      <div>
+        <h3>NYC Health Examination Form（表格205）</h3>
+        <p>NYC DOE Form CH205 — Child/Adolescent Health Examination Form</p>
+      </div>
+      <a class="btn btn-fill-red" href="https://www.schools.nyc.gov/docs/default-source/default-document-library/health-and-wellness/ch205-child-adolescent-health-examination-form-2025-26.pdf" target="_blank" rel="noopener noreferrer">查看文件 View PDF</a>
+    </div>
+
+    <div class="doc-card">
+      <div>
+        <h3>NYS Health Examination Form</h3>
+        <p>纽约长岛和纽约上州学校表格 — For schools outside NYC (Long Island, upstate NY)</p>
+      </div>
+      <a class="btn btn-fill-red" href="https://www.nysed.gov/sites/default/files/programs/student-support-services/health-exam-form.pdf" target="_blank" rel="noopener noreferrer">查看文件 View PDF</a>
+    </div>
   </div>
-
-  <p class="hint">Results open below using Google Maps</p>
-
-  <iframe
-    id="mapFrame"
-    class="map-frame"
-    src="https://www.google.com/maps?q=hospital&output=embed">
-  </iframe>
 </div>
 
 <footer>
   © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-  Map results are provided directly by Google Maps. CareBridge Kids does not verify or endorse individual providers listed.<br>
-  地图搜索结果由 Google 地图直接提供。康桥儿童健康不对列表中的具体医疗机构进行核实或背书。
+  Educational Use Only | Disclaimer | 免责声明<br><br>
+  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
 </footer>
-
-<script>
-  document.getElementById("searchBtn").addEventListener("click", function () {
-    const type = document.getElementById("careType").value;
-    const location = document.getElementById("location").value.trim();
-
-    const query = location
-      ? `${type} near ${location}`
-      : type;
-
-    const encodedQuery = encodeURIComponent(query);
-    document.getElementById("mapFrame").src =
-      `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
-  });
-
-  document.getElementById("location").addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      document.getElementById("searchBtn").click();
-    }
-  });
-</script>
 
 </body>
 </html>
