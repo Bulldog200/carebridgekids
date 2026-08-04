@@ -1,324 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W4ZG0SW575');
-</script>
-<title>疫苗中英文名称 | Vaccine Name Comparison | CareBridge Kids</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
 
-<style>
-:root {
-  --ink: #1a1a1a;
-  --muted: #5b5f66;
-  --blue: #2b6cb0;
-  --blue-pale: #eef2f7;
-  --red: #1a365d;
-  --red-dark: #122842;
-  --line: #e2e4e8;
-}
+    <!-- Basic styling -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
 
-* { box-sizing: border-box; }
+        header {
+            background-color: #0b3c5d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-body {
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  margin: 0;
-  background-color: #ffffff;
-  color: var(--ink);
-  overflow-x: hidden;
-}
+        .btn {
+          background-color: #f6ad55;
+          color: white;
+          padding: 8px 16px;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: bold;
+          font-size: 16px;
+          display: inline-block;
+          margin-top: 10px;
+        }
 
-h1, h2, h3, .brand-name {
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  font-weight: 600;
-  color: var(--ink);
-  margin: 0;
-}
+        main {
+            padding: 20px;
+        }
 
-a { color: var(--blue); }
-
-.btn {
-  padding: 9px 18px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 13.5px;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-outline {
-  border: 1px solid var(--ink);
-  color: var(--ink);
-  background: transparent;
-}
-.btn-outline:hover { background: #f3f4f6; }
-
-.btn-outline-red {
-  border: 1px solid var(--red);
-  color: var(--red);
-  background: transparent;
-}
-.btn-outline-red:hover { background: #e7f1ff; }
-
-.btn-fill {
-  border: 1px solid #e8590c;
-  background: #e8590c;
-  color: white;
-}
-.btn-fill:hover { background: #c2440a; border-color: #c2440a; }
-
-.btn-fill-red {
-  border: 1px solid var(--red);
-  background: var(--red);
-  color: white;
-}
-.btn-fill-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
-
-.btn-fill-white {
-  border: 1px solid #ffffff;
-  background: #ffffff;
-  color: var(--ink);
-}
-
-.back-bar {
-  padding: 14px 32px;
-  border-bottom: 1px solid var(--line);
-}
-
-.page-header {
-  background: var(--red);
-  color: white;
-  padding: 46px 32px;
-  text-align: center;
-}
-.page-header h1 {
-  color: white;
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 1.35;
-}
-.page-header p {
-  color: #cfe4ff;
-  font-size: 14px;
-  max-width: 640px;
-  margin: 4px auto 0;
-  line-height: 1.6;
-}
-
-footer {
-  background: #1f2328;
-  color: #c7cbd1;
-  padding: 32px 32px;
-  font-size: 10.5px;
-  text-align: center;
-  line-height: 1.7;
-  font-weight: 400;
-}
-footer a { color: #c7cbd1; }
-
-@media (max-width: 720px) {
-  .back-bar {
-    padding: 14px 18px;
-  }
-  .page-header {
-    padding: 34px 20px;
-  }
-  .page-header h1 {
-    font-size: 21px;
-  }
-  footer {
-    padding: 26px 18px;
-  }
-}
-
-  .page-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 44px 32px 64px;
-  }
-  .page-main p {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 14px;
-  }
-  .table-wrap {
-    overflow-x: auto;
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    margin-top: 22px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13.5px;
-  }
-  th {
-    background: var(--blue-pale);
-    color: var(--ink);
-    font-weight: 600;
-    text-align: left;
-    padding: 12px 14px;
-    border-bottom: 1px solid var(--line);
-    white-space: nowrap;
-  }
-  td {
-    padding: 12px 14px;
-    border-bottom: 1px solid var(--line);
-    color: var(--muted);
-  }
-  tr:last-child td {
-    border-bottom: none;
-  }
-  td a {
-    color: var(--blue);
-    font-weight: 600;
-    text-decoration: underline;
-    white-space: nowrap;
-  }
-  @media (max-width: 720px) {
-    .page-main {
-      padding: 30px 18px 48px;
-    }
-  }
-</style>
+        footer {
+          background: #edf2f7;
+          padding: 15px;
+          font-size: 10px;
+          text-align: center;
+          margin-top: 40px;
+          line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
-<div class="back-bar">
-  <a href="index.html" class="btn btn-fill-red">← 返回首页 Back to Home</a>
-</div>
+    <header>
+      <h2 style="font-size: 22px;">
+        疫苗中英文名称/官方中文疫苗说明书 Vaccine Name Comparison/Vaccine Information Statement (VIS)
+      </h2>
+      <a href="/index.html" class="btn">首页 / Home</a>
+    </header>
 
-<div class="page-header">
-  <h1>疫苗中英文名称 | Vaccine Name Comparison</h1>
-  <p>官方中英文疫苗说明书 (VIS) | Official Vaccine Information Statements</p>
-</div>
+    <main>
+<p>以下疫苗资料由美国疾病控制与预防中心（CDC）提供，并已翻译为简体中文。本网站不修改、不替代官方内容。本内容用于儿童疫苗信息教育目的，仅指引到官方疫苗信息声明（VIS）资源，不提供医疗建议。如需临床指导，请咨询儿科医生。</p>
+<p>The following vaccine information is provided by the U.S. Centers for Disease Control and Prevention (CDC) and has been translated into Simplified Chinese. This website does not modify or replace official content. This content is for educational purposes regarding childhood vaccines, provides guidance only to official Vaccine Information Statement (VIS) resources, and does not offer medical advice. For clinical guidance, please consult your pediatrician.</p>
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>中文名称</th>
+    <th>English Name</th>
+    <th>Official VIS (English)</th>
+    <th>Official VIS (中文)</th>
+  </tr>
+  <tr>
+    <td>百白破疫苗（白喉、破伤风、百日咳）</td>
+    <td>DTaP (Diphtheria, Tetanus, Pertussis)</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/dtap.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_dtap.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>流感嗜血杆菌疫苗</td>
+    <td>Hib (Haemophilus influenzae type b)</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hib.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_hib.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>乙型肝炎疫苗</td>
+    <td>Hepatitis B Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hepatitis_b.pdf">English VIS</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_hepatitis_b.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>甲型肝炎疫苗</td>
+    <td>Hepatitis A Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hepatitis_a.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_hepatitis_a.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>人乳头瘤病毒疫苗</td>
+    <td>HPV (Human Papillomavirus)</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/hpv.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_hpv.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>流感疫苗</td>
+    <td>Influenza Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/flu_inactive.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_flu_live.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>脑膜炎球菌ACWY疫苗</td>
+    <td>Meningococcal ACWY</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/meningococcal_acwy.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_meningococcal.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>B群脑膜炎双球菌</td>
+    <td>Meningococcal B</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/meningococcal_b.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_meningococcal_b.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>麻疹、腮腺炎、风疹疫苗</td>
+    <td>MMR (Measles, Mumps, Rubella)</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/mmr.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_mmr.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>多联疫苗</td>
+    <td>Multi-Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/multi_vaccine_infants.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_multi_vaccine_infants.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>小儿麻痹症疫苗</td>
+    <td>Polio Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/polio_ipv.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_polio_ipv.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>肺炎球菌结合疫苗</td>
+    <td>Pneumococcal Conjugate Vaccine (PCV)</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/pcv.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_pcv.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>水痘疫苗</td>
+    <td>Varicella (Chickenpox)</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/varicella.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_varicella.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>轮状病毒疫苗</td>
+    <td>Rotavirus Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/rotavirus.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_rotavirus.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+    <td>呼吸道合胞病毒疫苗</td>
+    <td>RSV Vaccine</td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/rsv.pdf">English VIS</a></td>
+    <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_rsv.pdf">简体中文 VIS</a></td>
+  </tr>
+  <tr>
+      <td>百白破疫苗</td>
+      <td>Tdap Vaccine</td>
+      <td><a href="https://www.immunize.org/wp-content/uploads/vis/tdap.pdf">English VIS</a></td>
+      <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_tdap.pdf">简体中文 VIS</a></td>
+  </tr>
+</table>
+    </main>
 
-<div class="page-main">
-  <p>以下疫苗资料由美国疾病控制与预防中心（CDC）提供，并已翻译为简体中文。本网站不修改、不替代官方内容。本内容用于儿童疫苗信息教育目的，仅指引到官方疫苗信息声明（VIS）资源，不提供医疗建议。如需临床指导，请咨询儿科医生。</p>
-  <p>The following vaccine information is provided by the U.S. Centers for Disease Control and Prevention (CDC) and has been translated into Simplified Chinese. This website does not modify or replace official content. This content is for educational purposes regarding childhood vaccines, provides guidance only to official Vaccine Information Statement (VIS) resources, and does not offer medical advice. For clinical guidance, please consult your pediatrician.</p>
+    <footer>
+      © 2026 CareBridge Kids | 康桥儿童健康<br><br>
 
-  <div class="table-wrap">
-    <table>
-      <tr>
-        <th>中文名称</th>
-        <th>English Name</th>
-        <th>Official VIS (English)</th>
-        <th>Official VIS (中文)</th>
-      </tr>
-      <tr>
-        <td>百白破疫苗（白喉、破伤风、百日咳）</td>
-        <td>DTaP (Diphtheria, Tetanus, Pertussis)</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/dtap.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_dtap.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>流感嗜血杆菌疫苗</td>
-        <td>Hib (Haemophilus influenzae type b)</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/hib.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_hib.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>乙型肝炎疫苗</td>
-        <td>Hepatitis B Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/hepatitis_b.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_hepatitis_b.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>甲型肝炎疫苗</td>
-        <td>Hepatitis A Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/hepatitis_a.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_hepatitis_a.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>人乳头瘤病毒疫苗</td>
-        <td>HPV (Human Papillomavirus)</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/hpv.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_hpv.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>流感疫苗</td>
-        <td>Influenza Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/flu_inactive.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_flu_live.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>脑膜炎球菌ACWY疫苗</td>
-        <td>Meningococcal ACWY</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/meningococcal_acwy.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_meningococcal.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>B群脑膜炎双球菌</td>
-        <td>Meningococcal B</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/meningococcal_b.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_meningococcal_b.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>麻疹、腮腺炎、风疹疫苗</td>
-        <td>MMR (Measles, Mumps, Rubella)</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/mmr.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_mmr.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>多联疫苗</td>
-        <td>Multi-Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/multi_vaccine_infants.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_multi_vaccine_infants.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>小儿麻痹症疫苗</td>
-        <td>Polio Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/polio_ipv.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_polio_ipv.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>肺炎球菌结合疫苗</td>
-        <td>Pneumococcal Conjugate Vaccine (PCV)</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/pcv.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_pcv.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>水痘疫苗</td>
-        <td>Varicella (Chickenpox)</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/varicella.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_varicella.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>呼吸道合胞病毒疫苗</td>
-        <td>RSV Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/rsv.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_traditional_rsv.pdf">简体中文 VIS</a></td>
-      </tr>
-      <tr>
-        <td>百白破疫苗</td>
-        <td>Tdap Vaccine</td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/tdap.pdf">English VIS</a></td>
-        <td><a href="https://www.immunize.org/wp-content/uploads/vis/chinese_simplified_tdap.pdf">简体中文 VIS</a></td>
-      </tr>
-    </table>
-  </div>
-</div>
+      Educational Use Only | Disclaimer | 免责声明<br><br>
 
-<footer>
-  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-  Educational Use Only | Disclaimer | 免责声明<br><br>
-  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
-  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
-</footer>
+      This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+
+      本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。<br></br>    </footer>
 
 </body>
 </html>
