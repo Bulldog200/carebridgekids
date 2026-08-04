@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W4ZG0SW575');
+</script>
+<title>儿童发展里程碑查询 | Developmental Milestones Checker | CareBridge Kids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #1a1a1a;
+  --muted: #5b5f66;
+  --blue: #2b6cb0;
+  --blue-pale: #eef2f7;
+  --red: #007bff;
+  --red-dark: #0056b3;
+  --line: #e2e4e8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .brand-name {
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+a { color: var(--blue); }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.brand-name span {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lang-toggle {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+}
+.btn-outline:hover { background: #f3f4f6; }
+
+.btn-outline-red {
+  border: 1px solid var(--red);
+  color: var(--red);
+  background: transparent;
+}
+.btn-outline-red:hover { background: #e7f1ff; }
+
+.btn-fill {
+  border: 1px solid #5c6b3f;
+  background: #5c6b3f;
+  color: white;
+}
+.btn-fill:hover { background: #4a5632; border-color: #4a5632; }
+
+.btn-fill-red {
+  border: 1px solid var(--red);
+  background: var(--red);
+  color: white;
+}
+.btn-fill-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+.btn-fill-white {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+nav.main-nav {
+  background: #f7f8fa;
+  border-bottom: 1px solid var(--line);
+}
+nav.main-nav ul {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+  list-style: none;
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+nav.main-nav a {
+  display: block;
+  padding: 13px 0;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13.5px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+nav.main-nav a:hover {
+  color: var(--red);
+}
+
+.page-header {
+  background: var(--red);
+  color: white;
+  padding: 46px 32px;
+  text-align: center;
+}
+.page-header h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.page-header p {
+  color: #cfe4ff;
+  font-size: 14px;
+  max-width: 640px;
+  margin: 4px auto 0;
+  line-height: 1.6;
+}
+
+footer {
+  background: #1f2328;
+  color: #c7cbd1;
+  padding: 32px 32px;
+  font-size: 10.5px;
+  text-align: center;
+  line-height: 1.7;
+  font-weight: 400;
+}
+footer a { color: #c7cbd1; }
+
+@media (max-width: 720px) {
+  .topbar {
+    padding: 14px 18px;
+    justify-content: center;
+    text-align: center;
+  }
+  .topbar-right {
+    width: 100%;
+    justify-content: center;
+  }
+  nav.main-nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 18px;
+    gap: 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .page-header {
+    padding: 34px 20px;
+  }
+  .page-header h1 {
+    font-size: 21px;
+  }
+  footer {
+    padding: 26px 18px;
+  }
+  .page-main {
+    padding: 28px 18px 48px;
+  }
+}
+
+.page-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 44px 32px 64px;
+}
+.page-main > p.intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.check-box {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px;
+  margin-top: 24px;
+}
+.check-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.check-box input[type="date"] {
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
+  color: var(--ink);
+  width: 100%;
+  max-width: 260px;
+}
+.check-box .btn {
+  margin-top: 16px;
+}
+#result {
+  margin-top: 28px;
+  display: none;
+}
+.result-card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px 24px;
+  background: var(--blue-pale);
+}
+.result-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.result-card p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.result-card .btn {
+  margin-right: 10px;
+}
+.note-box {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-top: 14px;
+}
+.note-box p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.disclaimer {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand-name">
+    康桥儿童健康 | CareBridge Kids
+    <span>CAREBRIDGE KIDS</span>
+  </div>
+  <div class="topbar-right">
+    <span class="lang-toggle">EN | 中文</span>
+    <a href="aboutmepage.html" class="btn btn-fill">关于我们 / About Us</a>
+    <a href="locator.html" class="btn btn-fill-red">查找附近医疗 / Find Care</a>
+  </div>
+</div>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">首页 Home</a></li>
+    <li><a href="VIS.html">疫苗指南 Vaccine Guide</a></li>
+    <li><a href="milestones.html">发展里程碑 Milestones</a></li>
+    <li><a href="requirements.html">入学要求 Requirements</a></li>
+    <li><a href="healthforms.html">健康表格 Health Forms</a></li>
+    <li><a href="fevermeds.html">退烧用药 Fever Meds</a></li>
+    <li><a href="locator.html">附近医疗 Find Care</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <h1>儿童发展里程碑查询 | Developmental Milestones Checker</h1>
+  <p>输入孩子的出生日期，查看美国疾病控制与预防中心（CDC）官方的年龄发展里程碑清单 | Enter your child's date of birth to view the official CDC developmental milestone checklist for their age</p>
+</div>
+
+<div class="page-main">
+  <p class="intro">本工具仅根据孩子的出生日期计算年龄，并直接链接到美国疾病控制与预防中心（CDC）"Learn the Signs. Act Early." 项目的官方里程碑清单，包括CDC官方中文版PDF清单。本网站不编写或修改任何医学内容，所有清单均为CDC官方原文。</p>
+  <p class="intro">This tool calculates your child's age from their date of birth and links directly to the official milestone checklists from the CDC's "Learn the Signs. Act Early." program, including the CDC's official Chinese-language PDF checklist. This website does not write or alter any medical content; every checklist shown is the CDC's own official document.</p>
+
+  <div class="check-box">
+    <label for="dob">孩子的出生日期 / Child's date of birth</label>
+    <input type="date" id="dob">
+    <br>
+    <button class="btn btn-fill-red" id="checkBtn">查看里程碑 Check Milestones</button>
+  </div>
+
+  <div id="result">
+    <div class="result-card">
+      <h3 id="resultTitle"></h3>
+      <p id="resultText"></p>
+      <a id="resultLinkZh" class="btn btn-fill-red" href="#" target="_blank" rel="noopener noreferrer">查看中文清单（CDC官方）View Chinese Checklist (CDC) →</a>
+      <a id="resultLink" class="btn btn-outline-red" href="#" target="_blank" rel="noopener noreferrer">English Checklist（英文版）→</a>
+    </div>
+    <div class="note-box" id="zhNote" style="display:none;">
+      <p id="zhText"></p>
+    </div>
+    <div class="note-box" id="nextNote" style="display:none;">
+      <p id="nextText"></p>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    本工具不提供医疗诊断或建议，仅指引到CDC官方发展里程碑资源。每个孩子的发展速度不同；如果您对孩子的发展有任何担忧，请务必咨询儿科医生，或联系您所在州的儿童早期干预项目。<br><br>
+    This tool does not provide medical diagnosis or advice. It only directs you to the CDC's official developmental milestone resources. Every child develops at their own pace. If you have any concerns about your child's development, please talk to your pediatrician or contact your state's Early Intervention program.
+  </p>
+</div>
+
+<script>
+  var CHECKPOINTS = [
+    { months: 2,  label: "2 个月 / 2 Months" },
+    { months: 4,  label: "4 个月 / 4 Months" },
+    { months: 6,  label: "6 个月 / 6 Months" },
+    { months: 9,  label: "9 个月 / 9 Months" },
+    { months: 12, label: "1 岁 / 1 Year" },
+    { months: 15, label: "15 个月 / 15 Months" },
+    { months: 18, label: "18 个月 / 18 Months" },
+    { months: 24, label: "2 岁 / 2 Years" },
+    { months: 30, label: "30 个月 / 30 Months" },
+    { months: 36, label: "3 岁 / 3 Years" },
+    { months: 48, label: "4 岁 / 4 Years" },
+    { months: 60, label: "5 岁 / 5 Years" }
+  ];
+
+  function ageInMonths(dob, today) {
+    var months = (today.getFullYear() - dob.getFullYear()) * 12 + (today.getMonth() - dob.getMonth());
+    if (today.getDate() < dob.getDate()) {
+      months -= 1;
+    }
+    return months;
+  }
+
+  var CHINESE_PDF_URL = "https://www.cdc.gov/act-early/media/pdfs/2025/11/cdc-milestone-checklists-ltsae-chinese.pdf";
+  var ENGLISH_PDF_URL = "https://www.cdc.gov/act-early/media/pdfs/2025/10/cdc-milestone-checklists-ltsae-english-508.pdf";
+
+  document.getElementById("checkBtn").addEventListener("click", function () {
+    var dobVal = document.getElementById("dob").value;
+    var resultDiv = document.getElementById("result");
+    var nextNote = document.getElementById("nextNote");
+    var zhNote = document.getElementById("zhNote");
+
+    if (!dobVal) {
+      return;
+    }
+
+    var dob = new Date(dobVal + "T00:00:00");
+    var today = new Date();
+
+    if (dob > today) {
+      document.getElementById("resultTitle").textContent = "日期无效 / Invalid Date";
+      document.getElementById("resultText").textContent = "出生日期不能在未来。Date of birth cannot be in the future.";
+      document.getElementById("resultLink").style.display = "none";
+      document.getElementById("resultLinkZh").style.display = "none";
+      nextNote.style.display = "none";
+      zhNote.style.display = "none";
+      resultDiv.style.display = "block";
+      return;
+    }
+
+    var months = ageInMonths(dob, today);
+    document.getElementById("resultLink").style.display = "inline-block";
+    document.getElementById("resultLinkZh").style.display = "inline-block";
+    document.getElementById("resultLinkZh").href = CHINESE_PDF_URL;
+    document.getElementById("resultLink").href = ENGLISH_PDF_URL;
+
+    if (months < 2) {
+      document.getElementById("resultTitle").textContent = "孩子还不到2个月 / Your child is under 2 months old";
+      document.getElementById("resultText").textContent = "CDC的里程碑清单从2个月开始。以下是第一个清单，供您提前了解。The CDC checklists begin at 2 months. Here is the first checklist for reference.";
+      zhNote.style.display = "block";
+      document.getElementById("zhText").textContent = "中英文清单均为CDC官方PDF文件，包含所有年龄段。请在文件中查找「2个月」部分。Both the Chinese and English checklists above are single official CDC PDFs covering all ages. Please look for the \"2 Months / 2个月\" section inside whichever document you open.";
+      nextNote.style.display = "none";
+      resultDiv.style.display = "block";
+      return;
+    }
+
+    if (months > 60) {
+      document.getElementById("resultTitle").textContent = "孩子已超过5岁 / Your child is older than 5 years";
+      document.getElementById("resultText").textContent = "CDC的这套里程碑清单覆盖到5岁。以下链接为CDC \"Learn the Signs. Act Early.\" 项目主页，可查看更多资源。CDC's checklist series here goes up to age 5. The link below goes to the CDC's \"Learn the Signs. Act Early.\" program homepage for more resources.";
+      document.getElementById("resultLinkZh").href = "https://www.cdc.gov/act-early/index.html";
+      document.getElementById("resultLink").href = "https://www.cdc.gov/act-early/index.html";
+      zhNote.style.display = "none";
+      nextNote.style.display = "none";
+      resultDiv.style.display = "block";
+      return;
+    }
+
+    var current = CHECKPOINTS[0];
+    var next = null;
+    for (var i = 0; i < CHECKPOINTS.length; i++) {
+      if (CHECKPOINTS[i].months <= months) {
+        current = CHECKPOINTS[i];
+        next = CHECKPOINTS[i + 1] || null;
+      }
+    }
+
+    document.getElementById("resultTitle").textContent = "适用清单： " + current.label + " / Checklist: " + current.label;
+    document.getElementById("resultText").textContent =
+      "您孩子目前约 " + months + " 个月大。以下是最近一个适用的CDC官方里程碑清单。Your child is approximately " + months + " months old. Below is the most recent applicable official CDC milestone checklist.";
+
+    zhNote.style.display = "block";
+    document.getElementById("zhText").textContent =
+      "中英文清单均为CDC官方PDF文件，包含所有年龄段。请在文件中查找「" + current.label.split(" / ")[0] + "」部分。Both the Chinese and English checklists above are single official CDC PDFs covering all ages. Please look for the \"" + current.label + "\" section inside whichever document you open.";
+
+    if (next) {
+      document.getElementById("nextText").textContent =
+        "下一个里程碑检查点： " + next.label + "（" + (next.months - months) + " 个月后）。Next checkpoint: " + next.label + " (in " + (next.months - months) + " months).";
+      nextNote.style.display = "block";
+    } else {
+      nextNote.style.display = "none";
+    }
+
+    resultDiv.style.display = "block";
+  });
+</script>
+
+<footer>
+  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
+  Educational Use Only | Disclaimer | 免责声明<br><br>
+  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
+</footer>
+
+</body>
+</html>
