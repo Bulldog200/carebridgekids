@@ -21,8 +21,8 @@
   --muted: #5b5f66;
   --blue: #2b6cb0;
   --blue-pale: #eef2f7;
-  --red: #007bff;
-  --red-dark: #0056b3;
+  --red: #1a365d;
+  --red-dark: #122842;
   --line: #e2e4e8;
 }
 
@@ -217,6 +217,15 @@ footer a { color: #c7cbd1; }
   }
 }
 
+  .site-brand {
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+
   .hero-banner {
     background: var(--red);
     color: white;
@@ -270,11 +279,17 @@ footer a { color: #c7cbd1; }
   .nav-card:hover {
     border-color: var(--blue);
   }
-  .nav-card img {
+  .nav-card-icon {
     width: 100%;
     height: 160px;
-    object-fit: cover;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-pale);
+  }
+  .nav-card-icon svg {
+    width: 84px;
+    height: 84px;
   }
   .nav-card-body {
     padding: 20px 22px 22px;
@@ -315,29 +330,9 @@ footer a { color: #c7cbd1; }
 
 <body>
 
-<div class="topbar">
-  <div class="brand-name">
-    康桥儿童健康 | CareBridge Kids
-    <span>CAREBRIDGE KIDS</span>
-  </div>
-  <div class="topbar-right">
-    <span class="lang-toggle">EN | 中文</span>
-    <a href="aboutmepage.html" class="btn btn-fill">关于我们 / About Us</a>
-    <a href="locator.html" class="btn btn-fill-red">查找附近医疗 / Find Care</a>
-  </div>
+<div class="site-brand">
+  康桥儿童健康 | CareBridge Kids
 </div>
-
-<nav class="main-nav">
-  <ul>
-    <li><a href="index.html">首页 Home</a></li>
-    <li><a href="VIS.html">疫苗指南 Vaccine Guide</a></li>
-    <li><a href="milestones.html">发展里程碑 Milestones</a></li>
-    <li><a href="requirements.html">入学要求 Requirements</a></li>
-    <li><a href="healthforms.html">健康表格 Health Forms</a></li>
-    <li><a href="fevermeds.html">退烧用药 Fever Meds</a></li>
-    <li><a href="locator.html">附近医疗 Find Care</a></li>
-  </ul>
-</nav>
 
 <div class="hero-banner">
   <h1>清晰的儿童健康信息<br>Clear Pediatric Health Info</h1>
@@ -351,7 +346,21 @@ footer a { color: #c7cbd1; }
   <div class="nav-cards-grid">
 
     <a class="nav-card" href="VIS.html">
-      <img src="https://images.pexels.com/photos/5863273/pexels-photo-5863273.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vaccine vials flat lay">
+      <div class="nav-card-icon">
+        <svg viewBox="0 0 84 84">
+          <rect x="14" y="30" width="22" height="34" rx="4" fill="#1a365d"></rect>
+          <rect x="19" y="19" width="12" height="13" rx="2" fill="#5b7fa6"></rect>
+          <rect x="16" y="40" width="18" height="15" rx="2" fill="#ffffff"></rect>
+          <line x1="25" y1="43" x2="25" y2="52" stroke="#e8590c" stroke-width="3" stroke-linecap="round"></line>
+          <line x1="20.5" y1="47.5" x2="29.5" y2="47.5" stroke="#e8590c" stroke-width="3" stroke-linecap="round"></line>
+          <g transform="rotate(-40 55 45)">
+            <rect x="45" y="38" width="26" height="11" rx="2" fill="#cfd8e3" stroke="#1a365d" stroke-width="2"></rect>
+            <line x1="71" y1="43.5" x2="80" y2="43.5" stroke="#1a365d" stroke-width="3" stroke-linecap="round"></line>
+            <rect x="39" y="38" width="7" height="11" fill="#e8590c"></rect>
+            <line x1="33" y1="43.5" x2="39" y2="43.5" stroke="#1a365d" stroke-width="3" stroke-linecap="round"></line>
+          </g>
+        </svg>
+      </div>
       <div class="nav-card-body">
         <h3>疫苗中英文名称对照 | Vaccine Name Comparison</h3>
         <p>官方中英文疫苗说明书 (VIS)，帮助家长了解每种疫苗。Official bilingual Vaccine Information Statements for every routine vaccine.</p>
@@ -360,7 +369,15 @@ footer a { color: #c7cbd1; }
     </a>
 
     <a class="nav-card" href="milestones.html">
-      <img src="https://images.pexels.com/photos/7111523/pexels-photo-7111523.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Colorful number blocks">
+      <div class="nav-card-icon">
+        <svg viewBox="0 0 84 84">
+          <line x1="10" y1="72" x2="76" y2="72" stroke="#c9d3de" stroke-width="4" stroke-linecap="round"></line>
+          <rect x="14" y="52" width="14" height="20" rx="2" fill="#7c98b6"></rect>
+          <rect x="32" y="40" width="14" height="32" rx="2" fill="#3f6690"></rect>
+          <rect x="50" y="24" width="14" height="48" rx="2" fill="#1a365d"></rect>
+          <path d="M57 6l3.4 6.9 7.6 1.1-5.5 5.4 1.3 7.6-6.8-3.6-6.8 3.6 1.3-7.6-5.5-5.4 7.6-1.1z" fill="#e8590c"></path>
+        </svg>
+      </div>
       <div class="nav-card-body">
         <h3>儿童发展里程碑查询 | Developmental Milestones Checker</h3>
         <p>输入孩子的出生日期，查看CDC官方的年龄发展里程碑清单。Enter your child's birth date to view the official CDC milestone checklist for their age.</p>
@@ -369,7 +386,13 @@ footer a { color: #c7cbd1; }
     </a>
 
     <a class="nav-card" href="requirements.html">
-      <img src="https://images.pexels.com/photos/8978610/pexels-photo-8978610.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Checklist on a clipboard">
+      <div class="nav-card-icon">
+        <svg viewBox="0 0 84 84">
+          <path d="M42 8l24 10v18c0 20-13 30-24 36V8z" fill="#1a365d"></path>
+          <path d="M42 8L18 18v18c0 20 13 30 24 36V8z" fill="#3f6690"></path>
+          <polyline points="30,42 39,51 56,32" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+        </svg>
+      </div>
       <div class="nav-card-body">
         <h3>入学疫苗接种要求 | School Immunization Requirements</h3>
         <p>纽约市和纽约州学校入学所需的官方疫苗接种要求文件。Official immunization requirement documents for NYC and NYS school entry.</p>
@@ -378,7 +401,18 @@ footer a { color: #c7cbd1; }
     </a>
 
     <a class="nav-card" href="healthforms.html">
-      <img src="https://images.pexels.com/photos/5668469/pexels-photo-5668469.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clipboard and papers on a desk">
+      <div class="nav-card-icon">
+        <svg viewBox="0 0 84 84">
+          <rect x="18" y="12" width="48" height="60" rx="6" fill="#f4ede0" stroke="#c9bda3" stroke-width="1.5"></rect>
+          <rect x="30" y="6" width="24" height="12" rx="3" fill="#1a365d"></rect>
+          <rect x="26" y="28" width="32" height="6" rx="2" fill="#8fa8c2"></rect>
+          <rect x="26" y="40" width="32" height="6" rx="2" fill="#8fa8c2"></rect>
+          <rect x="26" y="52" width="20" height="6" rx="2" fill="#8fa8c2"></rect>
+          <circle cx="58" cy="58" r="13" fill="#d9534f"></circle>
+          <line x1="58" y1="51.5" x2="58" y2="64.5" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"></line>
+          <line x1="51.5" y1="58" x2="64.5" y2="58" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
       <div class="nav-card-body">
         <h3>入学健康表格 | School Health Examination Forms</h3>
         <p>纽约市和纽约州学校入学所需的官方健康检查表格。Official health examination forms required for NYC and NYS school entry.</p>
@@ -387,7 +421,16 @@ footer a { color: #c7cbd1; }
     </a>
 
     <a class="nav-card" href="fevermeds.html">
-      <img src="https://images.pexels.com/photos/20140029/pexels-photo-20140029.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Medicine bottles and pills">
+      <div class="nav-card-icon">
+        <svg viewBox="0 0 84 84">
+          <path d="M36 12a6 6 0 0 1 12 0v34.8a14 14 0 1 1-12 0z" fill="#ffffff" stroke="#1a365d" stroke-width="3"></path>
+          <path d="M39 22a3 3 0 0 1 6 0v29a3 3 0 0 1-6 0z" fill="#e8590c"></path>
+          <circle cx="42" cy="60" r="9" fill="#e8590c"></circle>
+          <line x1="36" y1="24" x2="41" y2="24" stroke="#1a365d" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="36" y1="32" x2="41" y2="32" stroke="#1a365d" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="36" y1="40" x2="41" y2="40" stroke="#1a365d" stroke-width="2.5" stroke-linecap="round"></line>
+        </svg>
+      </div>
       <div class="nav-card-body">
         <h3>退烧药用量 | Fever Medication Dosage</h3>
         <p>泰诺与布洛芬的官方剂量图表。Official dosage charts for Tylenol and Motrin.</p>
@@ -396,7 +439,16 @@ footer a { color: #c7cbd1; }
     </a>
 
     <a class="nav-card" href="locator.html">
-      <img src="https://images.pexels.com/photos/36938793/pexels-photo-36938793.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hospital building">
+      <div class="nav-card-icon">
+        <svg viewBox="0 0 84 84">
+          <rect x="8" y="14" width="68" height="56" rx="6" fill="#cfe4ff"></rect>
+          <line x1="8" y1="37" x2="76" y2="33" stroke="#ffffff" stroke-width="3"></line>
+          <line x1="21" y1="14" x2="17" y2="70" stroke="#ffffff" stroke-width="3"></line>
+          <line x1="61" y1="14" x2="65" y2="70" stroke="#ffffff" stroke-width="3"></line>
+          <path d="M42 68s16-14 16-27a16 16 0 1 0-32 0c0 13 16 27 16 27z" fill="#e8590c"></path>
+          <circle cx="42" cy="41" r="7" fill="#ffffff"></circle>
+        </svg>
+      </div>
       <div class="nav-card-body">
         <h3>查找附近的医院、急诊中心和药房 | Find Nearby Care</h3>
         <p>输入所在地，查找附近的医院、急诊中心或药房。Search by location to find nearby hospitals, urgent care, and pharmacies.</p>
@@ -412,7 +464,6 @@ footer a { color: #c7cbd1; }
   Educational Use Only | Disclaimer | 免责声明<br><br>
   This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
   本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。<br><br>
-  Photos courtesy of Pexels contributors, used under the free Pexels License.<br><br>
   <a href='https://free-hit-counters.net/'>freehitcounters</a>
   <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=94293c0c4942ef98ddabc94b0ecf0d2c315cd7e6'></script>
   <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1494308/t/0"></script>
