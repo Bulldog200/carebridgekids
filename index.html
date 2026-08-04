@@ -111,11 +111,11 @@ a { color: var(--blue); }
 .btn-outline-red:hover { background: #e7f1ff; }
 
 .btn-fill {
-  border: 1px solid #5c6b3f;
-  background: #5c6b3f;
+  border: 1px solid #e8590c;
+  background: #e8590c;
   color: white;
 }
-.btn-fill:hover { background: #4a5632; border-color: #4a5632; }
+.btn-fill:hover { background: #c2440a; border-color: #c2440a; }
 
 .btn-fill-red {
   border: 1px solid var(--red);
@@ -217,198 +217,97 @@ footer a { color: #c7cbd1; }
   }
 }
 
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 360px;
-  }
-  .hero-text {
-    flex: 1 1 380px;
+  .hero-banner {
     background: var(--red);
     color: white;
-    padding: 52px 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 58px 32px 52px;
+    text-align: center;
   }
-  .hero-text h1 {
+  .hero-banner h1 {
     color: white;
     font-size: 29px;
     font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 16px;
-  }
-  .hero-text p {
-    font-size: 14.5px;
-    line-height: 1.65;
-    color: #cfe4ff;
-    max-width: 480px;
-    margin-bottom: 10px;
-    font-weight: 400;
-  }
-  .hero-text .btn { margin-top: 16px; align-self: flex-start; }
-
-  .hero-photo {
-    flex: 1 1 380px;
-    min-height: 360px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .why {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 56px 32px;
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-  }
-  .why h2 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  .why h2 + p.subhead {
-    font-size: 13.5px;
-    color: var(--muted);
-    font-weight: 500;
-    margin: 0 0 16px;
-  }
-  .why-left { flex: 1 1 360px; }
-  .why-left p {
-    color: var(--muted);
-    line-height: 1.7;
-    font-size: 14.5px;
-    font-weight: 400;
-  }
-  .why-left a {
-    font-weight: 600;
-    color: var(--blue);
-    text-decoration: underline;
-    font-size: 14px;
-  }
-
-  .why-right {
-    flex: 1 1 320px;
-  }
-  .why-right p {
-    font-size: 14.5px;
-    line-height: 1.7;
-    color: var(--muted);
+    line-height: 1.35;
     margin-bottom: 14px;
+  }
+  .hero-banner p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #cfe4ff;
+    max-width: 620px;
+    margin: 0 auto 6px;
     font-weight: 400;
   }
-  .why-right .btn {
-    font-size: 13px;
-    padding: 9px 16px;
+  .hero-banner .btn {
+    margin-top: 18px;
   }
 
-  .featured {
-    background: var(--blue-pale);
-    padding: 40px 32px 60px;
-  }
-  .featured-inner {
+  .nav-cards {
     max-width: 1180px;
     margin: 0 auto;
+    padding: 48px 32px 60px;
   }
-  .featured-grid {
+  .nav-cards h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .nav-cards-grid {
     display: flex;
-    gap: 26px;
     flex-wrap: wrap;
+    gap: 20px;
   }
-  .fcard {
+  .nav-card {
     flex: 1 1 300px;
     background: white;
+    border: 1px solid var(--line);
     border-radius: 4px;
     overflow: hidden;
-    border: 1px solid var(--line);
+    text-decoration: none;
+    display: block;
   }
-  .fcard img {
+  .nav-card:hover {
+    border-color: var(--blue);
+  }
+  .nav-card img {
     width: 100%;
-    height: 185px;
+    height: 160px;
     object-fit: cover;
     display: block;
   }
-  .fcard-body { padding: 18px 20px 22px; }
-  .fcard-body h3 {
+  .nav-card-body {
+    padding: 20px 22px 22px;
+  }
+  .nav-card h3 {
     font-size: 15px;
     font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
     line-height: 1.4;
-    margin-bottom: 9px;
   }
-  .fcard-body p {
+  .nav-card p {
     font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 11px;
-    font-weight: 400;
-  }
-  .fcard-body a {
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: underline;
-    color: var(--blue);
-  }
-
-  .more {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 52px 32px 60px;
-  }
-  .more h2 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 26px;
-  }
-  .more-grid {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
-  }
-  .mcard {
-    flex: 1 1 300px;
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 20px 22px;
-  }
-  .mcard h3 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 9px;
-  }
-  .mcard p {
-    font-size: 12.5px;
     color: var(--muted);
     line-height: 1.6;
     margin-bottom: 10px;
     font-weight: 400;
   }
-  .mcard a {
+  .nav-card span.go {
     font-size: 12.5px;
     font-weight: 600;
     color: var(--blue);
-    text-decoration: underline;
   }
 
   @media (max-width: 720px) {
-    .hero-text {
+    .hero-banner {
       padding: 40px 22px;
     }
-    .hero-text h1 {
+    .hero-banner h1 {
       font-size: 23px;
     }
-    .hero-photo {
-      min-height: 220px;
-    }
-    .why {
-      padding: 40px 22px;
-      gap: 34px;
-    }
-    .featured {
-      padding: 32px 18px 44px;
-    }
-    .more {
-      padding: 40px 18px 44px;
+    .nav-cards {
+      padding: 36px 18px 44px;
     }
   }
 </style>
@@ -440,93 +339,70 @@ footer a { color: #c7cbd1; }
   </ul>
 </nav>
 
-<div class="hero">
-  <div class="hero-text">
-    <h1>清晰可信的儿童健康信息<br>Clear, Trusted Pediatric Health Info</h1>
-    <p>康桥儿童健康是一个中英双语平台，帮助家长和照护者，尤其是移民家庭，便捷获取来自CDC等权威机构的儿童健康资源。</p>
-    <p>A bilingual platform helping parents and caregivers, especially immigrant families, access trusted children's health resources from the CDC and other official sources.</p>
-    <a href="aboutmepage.html" class="btn btn-fill-white">了解我们 Learn More</a>
-  </div>
-  <div class="hero-photo" style="background-image:url('https://images.pexels.com/photos/7653133/pexels-photo-7653133.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+<div class="hero-banner">
+  <h1>清晰的儿童健康信息<br>Clear Pediatric Health Info</h1>
+  <p>康桥儿童健康是一个中英双语平台，帮助家长和照护者，尤其是移民家庭，便捷获取来自CDC等权威机构的儿童健康资源。</p>
+  <p>A bilingual platform helping parents and caregivers, especially immigrant families, access trusted children's health resources from the CDC and other official sources.</p>
+  <a href="aboutmepage.html" class="btn btn-fill-white">了解我们的使命 Learn About Our Mission</a>
 </div>
 
-<div class="why">
-  <div class="why-left">
-    <h2>为什么选择康桥儿童健康？</h2>
-    <p class="subhead">Why CareBridge Kids?</p>
-    <p>
-      许多家庭在获取关键儿童健康信息时面临语言和文化的隔阂。
-      康桥儿童健康系统整理并链接来自美国CDC、AAP及纽约市/州卫生部门的官方信息，用中英双语呈现，让家长无需在多个网站间辗转查找。
-    </p>
-    <p>
-      Many families face language barriers when accessing pediatric health information.
-      We organize official guidance from the CDC, AAP, and NYC/NYS health departments into one bilingual, easy-to-navigate resource.
-    </p>
-    <a href="aboutmepage.html">了解我们的使命 Learn about our mission</a>
-  </div>
-  <div class="why-right">
-    <p>本网站所有内容仅用于教育目的，不构成医疗建议。所有信息均直接链接至官方权威来源，确保准确与可信。</p>
-    <p>Everything here is for educational purposes only and links directly back to official sources, so you always know the information is accurate and current.</p>
-    <a href="locator.html" class="btn btn-outline-red">查找附近医疗 Find Care Near You</a>
-  </div>
-</div>
+<div class="nav-cards">
+  <h2>浏览全部资源 | Browse All Resources</h2>
+  <div class="nav-cards-grid">
 
-<div class="featured">
-  <div class="featured-inner">
-    <div class="featured-grid">
-
-      <div class="fcard">
-        <img src="https://images.pexels.com/photos/3992931/pexels-photo-3992931.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Child after vaccination">
-        <div class="fcard-body">
-          <h3>疫苗中英文名称对照 | Vaccine Name Comparison</h3>
-          <p>官方中英文疫苗说明书 (VIS)，帮助家长了解每种疫苗。Official bilingual Vaccine Information Statements for every routine vaccine.</p>
-          <a href="VIS.html">查看指南 View Guide →</a>
-        </div>
+    <a class="nav-card" href="VIS.html">
+      <img src="https://images.pexels.com/photos/5863273/pexels-photo-5863273.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vaccine vials flat lay">
+      <div class="nav-card-body">
+        <h3>疫苗中英文名称对照 | Vaccine Name Comparison</h3>
+        <p>官方中英文疫苗说明书 (VIS)，帮助家长了解每种疫苗。Official bilingual Vaccine Information Statements for every routine vaccine.</p>
+        <span class="go">查看指南 View Guide →</span>
       </div>
+    </a>
 
-      <div class="fcard">
-        <img src="https://images.pexels.com/photos/36938793/pexels-photo-36938793.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hospital building">
-        <div class="fcard-body">
-          <h3>查找附近的医院、急诊中心和药房 | Find Nearby Care</h3>
-          <p>输入所在地，查找附近的医院、急诊中心或药房。Search by location to find nearby hospitals, urgent care, and pharmacies.</p>
-          <a href="locator.html">开始查找 Find Care →</a>
-        </div>
+    <a class="nav-card" href="milestones.html">
+      <img src="https://images.pexels.com/photos/7111523/pexels-photo-7111523.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Colorful number blocks">
+      <div class="nav-card-body">
+        <h3>儿童发展里程碑查询 | Developmental Milestones Checker</h3>
+        <p>输入孩子的出生日期，查看CDC官方的年龄发展里程碑清单。Enter your child's birth date to view the official CDC milestone checklist for their age.</p>
+        <span class="go">开始查询 Check Milestones →</span>
       </div>
+    </a>
 
-      <div class="fcard">
-        <img src="https://images.pexels.com/photos/3662635/pexels-photo-3662635.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Child playing with wooden blocks">
-        <div class="fcard-body">
-          <h3>儿童发展里程碑查询 | Developmental Milestones Checker</h3>
-          <p>输入孩子的出生日期，查看CDC官方的年龄发展里程碑清单。Enter your child's birth date to view the official CDC milestone checklist for their age.</p>
-          <a href="milestones.html">开始查询 Check Milestones →</a>
-        </div>
+    <a class="nav-card" href="requirements.html">
+      <img src="https://images.pexels.com/photos/8978610/pexels-photo-8978610.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Checklist on a clipboard">
+      <div class="nav-card-body">
+        <h3>入学疫苗接种要求 | School Immunization Requirements</h3>
+        <p>纽约市和纽约州学校入学所需的官方疫苗接种要求文件。Official immunization requirement documents for NYC and NYS school entry.</p>
+        <span class="go">查看要求 View Requirements →</span>
       </div>
+    </a>
 
-    </div>
-  </div>
-</div>
+    <a class="nav-card" href="healthforms.html">
+      <img src="https://images.pexels.com/photos/5668469/pexels-photo-5668469.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clipboard and papers on a desk">
+      <div class="nav-card-body">
+        <h3>入学健康表格 | School Health Examination Forms</h3>
+        <p>纽约市和纽约州学校入学所需的官方健康检查表格。Official health examination forms required for NYC and NYS school entry.</p>
+        <span class="go">查看表格 View Forms →</span>
+      </div>
+    </a>
 
-<div class="more">
-  <h2>更多资源 | More Resources</h2>
-  <div class="more-grid">
+    <a class="nav-card" href="fevermeds.html">
+      <img src="https://images.pexels.com/photos/20140029/pexels-photo-20140029.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Medicine bottles and pills">
+      <div class="nav-card-body">
+        <h3>退烧药用量 | Fever Medication Dosage</h3>
+        <p>泰诺与布洛芬的官方剂量图表。Official dosage charts for Tylenol and Motrin.</p>
+        <span class="go">查看剂量 View Dosage →</span>
+      </div>
+    </a>
 
-    <div class="mcard">
-      <h3>纽约市和纽约州学校疫苗接种要求<br>NY School Immunization Requirements</h3>
-      <p>官方入学疫苗接种要求文件链接。Official school entry immunization requirement documents.</p>
-      <a href="requirements.html">查看详情 See details →</a>
-    </div>
-
-    <div class="mcard">
-      <h3>纽约市和纽约州学校入学健康表格<br>NY School Health Examination Form</h3>
-      <p>入学所需的官方健康检查表格。Official health examination forms required for school entry.</p>
-      <a href="healthforms.html">查看详情 See details →</a>
-    </div>
-
-    <div class="mcard">
-      <h3>退烧药用量 | Fever Medication Dosage</h3>
-      <p>泰诺与布洛芬的官方剂量图表。Official dosage charts for Tylenol and Motrin.</p>
-      <a href="fevermeds.html">查看详情 See details →</a>
-    </div>
+    <a class="nav-card" href="locator.html">
+      <img src="https://images.pexels.com/photos/36938793/pexels-photo-36938793.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hospital building">
+      <div class="nav-card-body">
+        <h3>查找附近的医院、急诊中心和药房 | Find Nearby Care</h3>
+        <p>输入所在地，查找附近的医院、急诊中心或药房。Search by location to find nearby hospitals, urgent care, and pharmacies.</p>
+        <span class="go">开始查找 Find Care →</span>
+      </div>
+    </a>
 
   </div>
 </div>
