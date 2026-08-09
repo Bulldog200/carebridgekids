@@ -1,144 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>附近的医疗资源 | Find Care Near You | CareBridge Kids</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W4ZG0SW575');
+  </script>
+  <title>附近的医疗资源 | Find Care Near You | CareBridge Kids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-gray: #f9fafb;
+      --border-color: #e5e7eb;
+      --text-dark: #111827;
+      --text-muted: #6b7280;
+    }
 
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background-color: #f7fafc;
-    color: #2d3748;
-  }
-  header {
-    background-color: #1a365d;
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
-  }
-  header h1 { font-size: 24px; margin: 0 0 6px; }
-  header p { margin: 4px 0; opacity: 0.9; font-size: 14px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f3f4f6; padding: 20px; }
 
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px;
-  }
+    .back-bar-wrap {
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+    .back-link {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .back-link:hover { background: #eff6ff; }
 
-  .search-box {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-  }
+    .dashboard-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+    }
 
-  select, input, button {
-    padding: 10px 14px;
-    border-radius: 6px;
-    border: 1px solid #cbd5e0;
-    font-size: 15px;
-  }
+    .header-row {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
 
-  input {
-    flex: 1;
-    min-width: 180px;
-  }
+    .title { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; }
+    .subtitle { font-size: 0.875rem; color: var(--text-muted); margin-top: 4px; }
 
-  .btn {
-    background-color: #f6ad55;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .btn:hover { background-color: #ed8936; }
+    .form-group { margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .form-group select,
+    .form-group input {
+      padding: 10px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      font-family: inherit;
+      outline: none;
+    }
+    .form-group select:focus,
+    .form-group input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .form-group input { flex: 1; min-width: 180px; }
 
-  .map-frame {
-    width: 100%;
-    height: 450px;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+    .btn-search {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-search:hover { background: var(--primary-hover); }
 
-  .hint {
-    font-size: 13px;
-    color: #718096;
-    margin-bottom: 10px;
-  }
+    .hint {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
 
-  footer {
-    background: #edf2f7;
-    padding: 20px;
-    font-size: 10px;
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.5;
-  }
-</style>
+    .map-frame {
+      width: 100%;
+      height: 420px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      display: block;
+    }
+
+    footer {
+      background: #edf2f7;
+      color: #2d3748;
+      padding: 24px 20px;
+      font-size: 10px;
+      text-align: center;
+      margin: 24px auto 0;
+      line-height: 1.5;
+      max-width: 700px;
+      border-radius: 8px;
+    }
+    footer a { color: var(--primary); }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>查找附近的医院、急诊中心和药房 | Find Nearby Hospitals, Urgent Care & Pharmacies</h1>
-  <p>输入您的城市或邮编，查找附近的医院、急诊中心或药房</p>
-  <p>Enter your city or ZIP code to find nearby hospitals, urgent care centers, or pharmacies</p>
-</header>
-
-<main>
-  <div class="search-box">
-    <select id="careType">
-      <option value="hospital">医院 / Hospital</option>
-      <option value="urgent+care">急诊中心 / Urgent Care</option>
-      <option value="pharmacy">药房 / Pharmacy</option>
-    </select>
-    <input type="text" id="location" placeholder="城市或邮编 / City or ZIP code (e.g. Flushing, NY)">
-    <button class="btn" id="searchBtn">🔍 搜索 / Search</button>
+  <div class="back-bar-wrap">
+    <a href="index.html" class="back-link">← 返回首页 Back to Home</a>
   </div>
 
-  <p class="hint">Results open below using Google Maps</p>
+  <div class="dashboard-card">
+    <div class="header-row">
+      <h1 class="title">查找附近的医院、急诊中心和药房</h1>
+      <p class="subtitle">Find Nearby Hospitals, Urgent Care &amp; Pharmacies &mdash; 输入您的城市或邮编，查找附近的医疗资源</p>
+    </div>
 
-  <iframe
-    id="mapFrame"
-    class="map-frame"
-    src="https://www.google.com/maps?q=hospital&output=embed">
-  </iframe>
-</main>
+    <div class="form-group">
+      <select id="careType">
+        <option value="hospital">医院 / Hospital</option>
+        <option value="urgent+care">急诊中心 / Urgent Care</option>
+        <option value="pharmacy">药房 / Pharmacy</option>
+      </select>
+      <input type="text" id="location" placeholder="城市或邮编 / City or ZIP code (e.g. Flushing, NY)">
+      <button class="btn-search" id="searchBtn">搜索 / Search</button>
+    </div>
 
-<footer>
-  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-  Map results are provided directly by Google Maps. CareBridge Kids does not verify or endorse individual providers listed.<br>
-  地图搜索结果由 Google 地图直接提供。康桥儿童健康不对列表中的具体医疗机构进行核实或背书。
-</footer>
+    <p class="hint">Results open below using Google Maps</p>
 
-<script>
-  document.getElementById("searchBtn").addEventListener("click", function () {
-    const type = document.getElementById("careType").value;
-    const location = document.getElementById("location").value.trim();
+    <iframe
+      id="mapFrame"
+      class="map-frame"
+      src="https://www.google.com/maps?q=hospital&output=embed">
+    </iframe>
+  </div>
 
-    const query = location
-      ? `${type} near ${location}`
-      : type;
+  <footer>
+    © 2026 CareBridge Kids | 康桥儿童健康<br><br>
+    Map results are provided directly by Google Maps. CareBridge Kids does not verify or endorse individual providers listed.<br>
+    地图搜索结果由 Google 地图直接提供。康桥儿童健康不对列表中的具体医疗机构进行核实或背书。
+  </footer>
 
-    const encodedQuery = encodeURIComponent(query);
-    document.getElementById("mapFrame").src =
-      `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
-  });
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", function () {
+      const type = document.getElementById("careType").value;
+      const location = document.getElementById("location").value.trim();
 
+      const query = location
+        ? `${type} near ${location}`
+        : type;
 
-  document.getElementById("location").addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      document.getElementById("searchBtn").click();
-    }
-  });
-</script>
+      const encodedQuery = encodeURIComponent(query);
+      document.getElementById("mapFrame").src =
+        `https://www.google.com/maps?q=${encodedQuery}&output=embed`;
+    });
+
+    document.getElementById("location").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        document.getElementById("searchBtn").click();
+      }
+    });
+  </script>
 
 </body>
 </html>

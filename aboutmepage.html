@@ -2,111 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Us | CareBridge Kids</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W4ZG0SW575');
+  </script>
+  <title>关于我们 | About Us | CareBridge Kids</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f7fafc;
-      color: #2d3748;
-      line-height: 1.6;
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-gray: #f9fafb;
+      --border-color: #e5e7eb;
+      --text-dark: #111827;
+      --text-muted: #6b7280;
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f3f4f6; padding: 20px; }
+
+    .back-bar-wrap {
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+    .back-link {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .back-link:hover { background: #eff6ff; }
+
+    .dashboard-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+    }
+
+    .header-row {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .title { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; }
+    .subtitle { font-size: 0.875rem; color: var(--text-muted); margin-top: 4px; }
+
+    .about-photo {
+      width: 100%;
+      max-width: 480px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+
+    .about-section {
+      margin-bottom: 20px;
+    }
+    .about-section:last-child { margin-bottom: 0; }
+    .about-section h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .about-section p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
     footer {
       background: #edf2f7;
-      padding: 15px;
-      font-size: 9px;
+      color: #2d3748;
+      padding: 24px 20px;
+      font-size: 10px;
       text-align: center;
-      margin-top: 40px;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #1a365d;
-      color: white;
-      padding: 15px 20px;
-      text-align: center;
-    }
-    .btn {
-      background-color: #f6ad55;
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
+      margin: 24px auto 0;
+      line-height: 1.5;
+      max-width: 700px;
       border-radius: 8px;
-      font-weight: bold;
-      font-size: 16px;
-      display: inline-block;
-      margin-top: 10px;
     }
-    img {
-      max-width: 500px;   /* adjust size here */
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px; /* center it + spacing */
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #1a365d;
-      margin-bottom: 10px;
-    }
+    footer a { color: var(--primary); }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>关于我们 | About Us</h1>
-    <a href="/index.html" class="btn">首页 / Home</a>
-  </header>
+  <div class="back-bar-wrap">
+    <a href="index.html" class="back-link">← 返回首页 Back to Home</a>
+  </div>
 
-  <main>
-    <section>
-      <img src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/family.jpg" alt="CareBridgeKids">
-      <h3>我们的使命</h3>
-      <p>
-许多家庭在获取关键儿童健康信息时，面临语言和文化的隔阂。康桥儿童健康正是为弥合这一鸿沟而创立。我们是一个中英文双语儿童健康信息平台，致力于帮助家长与照护者——尤其是移民及多语言家庭——清晰、便捷地获取源自权威机构的健康知识。我们系统地整合并链接来自美国疾病控制与预防中心(CDC)、美国儿科学会(AAP)及纽约市/州卫生部门等官方信源的信息。
-康桥儿童健康是一个独立的教育项目，旨在提供可靠信息，不能替代专业医生的诊断与建议。
+  <div class="dashboard-card">
+    <div class="header-row">
+      <h1 class="title">关于我们 | About Us</h1>
+      <p class="subtitle">CareBridge Kids | 康桥儿童健康</p>
+    </div>
 
-清晰沟通，科学养育。
-    </section>
+    <img class="about-photo" src="https://raw.githubusercontent.com/Bulldog200/carebridgekids/refs/heads/main/family.jpg" alt="CareBridge Kids">
 
-    <section>
-    <h3>Our Mission</h3>
-        <p>
-            Many families face language barriers when accessing pediatric health information. CareBridge Kids was created to help bridge that gap.
+    <div class="about-section">
+      <h2>我们的使命</h2>
+      <p>许多家庭在获取关键儿童健康信息时，面临语言和文化的隔阂。康桥儿童健康正是为弥合这一鸿沟而创立。我们是一个中英文双语儿童健康信息平台，致力于帮助家长与照护者——尤其是移民及多语言家庭——清晰、便捷地获取源自权威机构的健康知识。我们系统地整合并链接来自美国疾病控制与预防中心（CDC）、美国儿科学会（AAP）及纽约市/州卫生部门等官方信源的信息。康桥儿童健康是一个独立的教育项目，旨在提供可靠信息，不能替代专业医生的诊断与建议。清晰沟通，科学养育。</p>
+    </div>
 
-
-
-            CareBridge Kids is a bilingual pediatric health information platform that supports parents and caregivers—especially immigrant and multilingual families—by providing clear, reliable, and trusted children's health resources in both English and Simplified Chinese.
-
-
-
-            The website organizes essential pediatric health information with direct links to official sources, including the U.S. Centers for Disease Control and Prevention (CDC), the American Academy of Pediatrics (AAP), and New York City and New York State health departments.
-
-
-
-            CareBridge Kids is an independent educational project and does not replace professional medical advice.
-        </p>
-    </section>
-  </main>
+    <div class="about-section">
+      <h2>Our Mission</h2>
+      <p>Many families face language barriers when accessing pediatric health information. CareBridge Kids was created to help bridge that gap. CareBridge Kids is a bilingual pediatric health information platform that supports parents and caregivers &mdash; especially immigrant and multilingual families &mdash; by providing clear, reliable, and trusted children's health resources in both English and Simplified Chinese. The website organizes essential pediatric health information with direct links to official sources, including the U.S. Centers for Disease Control and Prevention (CDC), the American Academy of Pediatrics (AAP), and New York City and New York State health departments. CareBridge Kids is an independent educational project and does not replace professional medical advice.</p>
+    </div>
+  </div>
 
   <footer>
-  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-
-  Educational Use Only | Disclaimer | 免责声明<br><br>
-
-  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
-
-  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。<br></br>
+    © 2026 CareBridge Kids | 康桥儿童健康<br><br>
+    Educational Use Only | Disclaimer | 免责声明<br><br>
+    This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+    本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
   </footer>
+
 </body>
 </html>
