@@ -1,391 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W4ZG0SW575');
-</script>
-<title>儿童发展里程碑查询 | Developmental Milestones Checker | CareBridge Kids</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4ZG0SW575"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W4ZG0SW575');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>儿童发育里程碑与健康追踪器 | Child Developmental Milestone & Health Tracker | CareBridge Kids</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-gray: #f9fafb;
+      --border-color: #e5e7eb;
+      --text-dark: #111827;
+      --text-muted: #6b7280;
+    }
 
-<style>
-:root {
-  --ink: #1a1a1a;
-  --muted: #5b5f66;
-  --blue: #2b6cb0;
-  --blue-pale: #eef2f7;
-  --red: #1a365d;
-  --red-dark: #122842;
-  --line: #e2e4e8;
-}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f3f4f6; padding: 20px; }
 
-* { box-sizing: border-box; }
+    .back-bar-wrap {
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+    .back-link {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .back-link:hover { background: #eff6ff; }
 
-body {
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  margin: 0;
-  background-color: #ffffff;
-  color: var(--ink);
-  overflow-x: hidden;
-}
+    .dashboard-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+    }
 
-h1, h2, h3, .brand-name {
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  font-weight: 600;
-  color: var(--ink);
-  margin: 0;
-}
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
 
-a { color: var(--blue); }
+    .title { font-size: 1.25rem; font-weight: 700; color: var(--text-dark); }
+    .subtitle { font-size: 0.875rem; color: var(--text-muted); margin-top: 4px; }
 
-.btn {
-  padding: 9px 18px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 13.5px;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
-}
+    .lang-switcher {
+      display: flex;
+      background: #f3f4f6;
+      padding: 4px;
+      border-radius: 8px;
+      gap: 4px;
+    }
 
-.btn-outline {
-  border: 1px solid var(--ink);
-  color: var(--ink);
-  background: transparent;
-}
-.btn-outline:hover { background: #f3f4f6; }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
 
-.btn-outline-red {
-  border: 1px solid var(--red);
-  color: var(--red);
-  background: transparent;
-}
-.btn-outline-red:hover { background: #e7f1ff; }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
 
-.btn-fill {
-  border: 1px solid #e8590c;
-  background: #e8590c;
-  color: white;
-}
-.btn-fill:hover { background: #c2440a; border-color: #c2440a; }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: #374151; margin-bottom: 8px; }
+    .date-input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+    }
+    .date-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
 
-.btn-fill-red {
-  border: 1px solid var(--red);
-  background: var(--red);
-  color: white;
-}
-.btn-fill-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+    .results-container { display: flex; flex-direction: column; gap: 14px; }
 
-.btn-fill-white {
-  border: 1px solid #ffffff;
-  background: #ffffff;
-  color: var(--ink);
-}
+    .result-box {
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-gray);
+    }
 
-.back-bar {
-  padding: 14px 32px;
-  border-bottom: 1px solid var(--line);
-}
+    .result-box.age-box { background: #eff6ff; border-color: #bfdbfe; }
+    .result-box.visit-box { background: #f0fdf4; border-color: #bbf7d0; }
+    .result-box.vaccine-box {
+      background: #faf5ff;
+      border-color: #e9d5ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.page-header {
-  background: var(--red);
-  color: white;
-  padding: 46px 32px;
-  text-align: center;
-}
-.page-header h1 {
-  color: white;
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 1.35;
-}
-.page-header p {
-  color: #cfe4ff;
-  font-size: 14px;
-  max-width: 640px;
-  margin: 4px auto 0;
-  line-height: 1.6;
-}
+    .box-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .age-box .box-label { color: #1e40af; }
+    .visit-box .box-label { color: #166534; }
+    .vaccine-box .box-label { color: #6b21a8; }
 
-footer {
-  background: #1f2328;
-  color: #c7cbd1;
-  padding: 32px 32px;
-  font-size: 10.5px;
-  text-align: center;
-  line-height: 1.7;
-  font-weight: 400;
-}
-footer a { color: #c7cbd1; }
+    .box-value { font-size: 1.125rem; font-weight: 700; color: var(--text-dark); margin-top: 4px; }
+    .age-box .box-value { font-size: 1.5rem; color: #1e3a8a; }
+    .visit-box .box-value { color: #14532d; }
 
-@media (max-width: 720px) {
-  .back-bar {
-    padding: 14px 18px;
-  }
-  .page-header {
-    padding: 34px 20px;
-  }
-  .page-header h1 {
-    font-size: 21px;
-  }
-  footer {
-    padding: 26px 18px;
-  }
-  .page-main {
-    padding: 28px 18px 48px;
-  }
-}
+    .cdc-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    .cdc-link:hover { color: var(--primary-hover); }
 
-.page-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 44px 32px 64px;
-}
-.page-main > p.intro {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 14px;
-}
-.check-box {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 24px;
-  margin-top: 24px;
-}
-.check-box label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.check-box input[type="date"] {
-  padding: 10px 14px;
-  border-radius: 4px;
-  border: 1px solid var(--line);
-  font-size: 14px;
-  font-family: 'Mulish', 'Noto Sans SC', sans-serif;
-  color: var(--ink);
-  width: 100%;
-  max-width: 260px;
-}
-.check-box .btn {
-  margin-top: 16px;
-}
-#result {
-  margin-top: 28px;
-  display: none;
-}
-.result-card {
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 22px 24px;
-  background: var(--blue-pale);
-}
-.result-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.result-card p {
-  font-size: 13.5px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-.result-card .btn {
-  margin-right: 10px;
-}
-.note-box {
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 18px 20px;
-  margin-top: 14px;
-}
-.note-box p {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin: 0;
-}
-.disclaimer {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-}
-</style>
+    .btn-vaccine {
+      background: #7e22ce;
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .btn-vaccine:hover { background: #6b21a8; }
+
+    .error-box { padding: 12px; background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; border-radius: 8px; font-size: 0.875rem; }
+
+    .disclaimer-note {
+      max-width: 600px;
+      margin: 16px auto 0;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    footer {
+      background: #edf2f7;
+      color: #2d3748;
+      padding: 24px 20px;
+      font-size: 10px;
+      text-align: center;
+      margin: 24px auto 0;
+      line-height: 1.5;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    footer a { color: var(--primary); }
+  </style>
 </head>
 <body>
 
-<div class="back-bar">
-  <a href="index.html" class="btn btn-fill-red">← 返回首页 Back to Home</a>
-</div>
-
-<div class="page-header">
-  <h1>儿童发展里程碑查询 | Developmental Milestones Checker</h1>
-  <p>输入孩子的出生日期，查看美国疾病控制与预防中心（CDC）官方的年龄发展里程碑清单 | Enter your child's date of birth to view the official CDC developmental milestone checklist for their age</p>
-</div>
-
-<div class="page-main">
-  <p class="intro">本工具仅根据孩子的出生日期计算年龄，并直接链接到美国疾病控制与预防中心（CDC）"Learn the Signs. Act Early." 项目的官方里程碑清单，包括CDC官方中文版PDF清单。本网站不编写或修改任何医学内容，所有清单均为CDC官方原文。</p>
-  <p class="intro">This tool calculates your child's age from their date of birth and links directly to the official milestone checklists from the CDC's "Learn the Signs. Act Early." program, including the CDC's official Chinese-language PDF checklist. This website does not write or alter any medical content; every checklist shown is the CDC's own official document.</p>
-
-  <div class="check-box">
-    <label for="dob">孩子的出生日期 / Child's date of birth</label>
-    <input type="date" id="dob">
-    <br>
-    <button class="btn btn-fill-red" id="checkBtn">查看里程碑 Check Milestones</button>
+  <div class="back-bar-wrap">
+    <a href="index.html" class="back-link">← 返回首页 Back to Home</a>
   </div>
 
-  <div id="result">
-    <div class="result-card">
-      <h3 id="resultTitle"></h3>
-      <p id="resultText"></p>
-      <a id="resultLinkZh" class="btn btn-fill-red" href="#" target="_blank" rel="noopener noreferrer">查看中文清单（CDC官方）View Chinese Checklist (CDC) →</a>
-      <a id="resultLink" class="btn btn-outline-red" href="#" target="_blank" rel="noopener noreferrer">English Checklist（英文版）→</a>
+  <div class="dashboard-card">
+    <!-- Header -->
+    <div class="header-row">
+      <div>
+        <h1 class="title" id="ui-title">Child Developmental Milestone & Health Tracker</h1>
+        <p class="subtitle" id="ui-subtitle">CDC-aligned patient education tool for ages 0–5 years</p>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+        <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+      </div>
     </div>
-    <div class="note-box" id="zhNote" style="display:none;">
-      <p id="zhText"></p>
+
+    <!-- Date Input -->
+    <div class="form-group">
+      <label class="form-label" id="ui-enter-dob" for="dob-input">Enter your child's birthday:</label>
+      <input type="date" id="dob-input" class="date-input" onchange="calculateMilestones()">
     </div>
-    <div class="note-box" id="nextNote" style="display:none;">
-      <p id="nextText"></p>
-    </div>
+
+    <!-- Output Section -->
+    <div id="results" class="results-container" style="display: none;"></div>
+
+    <p class="disclaimer-note" id="ui-disclaimer">
+      This tool does not provide medical diagnosis or advice. It links directly to the CDC's official "Learn the Signs. Act Early." milestone checklists and the CDC's official child immunization schedule. Every child develops at their own pace; please talk to your pediatrician with any concerns.
+    </p>
   </div>
 
-  <p class="disclaimer">
-    本工具不提供医疗诊断或建议，仅指引到CDC官方发展里程碑资源。每个孩子的发展速度不同；如果您对孩子的发展有任何担忧，请务必咨询儿科医生，或联系您所在州的儿童早期干预项目。<br><br>
-    This tool does not provide medical diagnosis or advice. It only directs you to the CDC's official developmental milestone resources. Every child develops at their own pace. If you have any concerns about your child's development, please talk to your pediatrician or contact your state's Early Intervention program.
-  </p>
-</div>
+  <footer>
+    © 2026 CareBridge Kids | 康桥儿童健康<br><br>
+    Educational Use Only | Disclaimer | 免责声明<br><br>
+    This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
+    本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
+  </footer>
 
-<script>
-  var CHECKPOINTS = [
-    { months: 2,  label: "2 个月 / 2 Months" },
-    { months: 4,  label: "4 个月 / 4 Months" },
-    { months: 6,  label: "6 个月 / 6 Months" },
-    { months: 9,  label: "9 个月 / 9 Months" },
-    { months: 12, label: "1 岁 / 1 Year" },
-    { months: 15, label: "15 个月 / 15 Months" },
-    { months: 18, label: "18 个月 / 18 Months" },
-    { months: 24, label: "2 岁 / 2 Years" },
-    { months: 30, label: "30 个月 / 30 Months" },
-    { months: 36, label: "3 岁 / 3 Years" },
-    { months: 48, label: "4 岁 / 4 Years" },
-    { months: 60, label: "5 岁 / 5 Years" }
-  ];
+  <script>
+    // ----------------------------------------------------
+    // 1. DATA & DICTIONARIES
+    // ----------------------------------------------------
+    // Official current CDC child/adolescent immunization schedule (verified live).
+    const CDC_VACCINE_URL = "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-age.html";
 
-  function ageInMonths(dob, today) {
-    var months = (today.getFullYear() - dob.getFullYear()) * 12 + (today.getMonth() - dob.getMonth());
-    if (today.getDate() < dob.getDate()) {
-      months -= 1;
-    }
-    return months;
-  }
+    // Single combined CDC checklist booklet, one per language. Both booklets use
+    // the identical layout: no cover/TOC page, each age gets exactly 2 pages
+    // (checklist + "help your child learn and grow" tips), in order from 2 months
+    // through 60 months - confirmed by reading the actual Chinese PDF page-by-page.
+    // Each link below jumps straight to that age's checklist page via the
+    // standard PDF "#page=N" open parameter.
+    const ENGLISH_PDF_URL = "https://www.cdc.gov/act-early/media/pdfs/2025/10/cdc-milestone-checklists-ltsae-english-508.pdf";
+    const CHINESE_PDF_URL = "https://www.cdc.gov/act-early/media/pdfs/2025/11/cdc-milestone-checklists-ltsae-chinese.pdf";
 
-  var CHINESE_PDF_URL = "https://www.cdc.gov/act-early/media/pdfs/2025/11/cdc-milestone-checklists-ltsae-chinese.pdf";
-  var ENGLISH_PDF_URL = "https://www.cdc.gov/act-early/media/pdfs/2025/10/cdc-milestone-checklists-ltsae-english-508.pdf";
-
-  document.getElementById("checkBtn").addEventListener("click", function () {
-    var dobVal = document.getElementById("dob").value;
-    var resultDiv = document.getElementById("result");
-    var nextNote = document.getElementById("nextNote");
-    var zhNote = document.getElementById("zhNote");
-
-    if (!dobVal) {
-      return;
+    function pdfPage(baseUrl, page) {
+      return baseUrl + "#page=" + page;
     }
 
-    var dob = new Date(dobVal + "T00:00:00");
-    var today = new Date();
+    const MILESTONE_TIERS = [
+      { months: 2,  page: 1,  label: { en: "2 Months", zh: "2个月" } },
+      { months: 4,  page: 3,  label: { en: "4 Months", zh: "4个月" } },
+      { months: 6,  page: 5,  label: { en: "6 Months", zh: "6个月" } },
+      { months: 9,  page: 7,  label: { en: "9 Months", zh: "9个月" } },
+      { months: 12, page: 9,  label: { en: "12 Months (1 Year)", zh: "12个月 (1岁)" } },
+      { months: 15, page: 11, label: { en: "15 Months", zh: "15个月" } },
+      { months: 18, page: 13, label: { en: "18 Months", zh: "18个月" } },
+      { months: 24, page: 15, label: { en: "24 Months (2 Years)", zh: "24个月 (2岁)" } },
+      { months: 30, page: 17, label: { en: "30 Months", zh: "30个月" } },
+      { months: 36, page: 19, label: { en: "36 Months (3 Years)", zh: "36个月 (3岁)" } },
+      { months: 48, page: 21, label: { en: "48 Months (4 Years)", zh: "48个月 (4岁)" } },
+      { months: 60, page: 23, label: { en: "60 Months (5 Years)", zh: "60个月 (5岁)" } }
+    ].map(function (tier) {
+      tier.cdcUrl = {
+        en: pdfPage(ENGLISH_PDF_URL, tier.page),
+        zh: pdfPage(CHINESE_PDF_URL, tier.page)
+      };
+      return tier;
+    });
 
-    if (dob > today) {
-      document.getElementById("resultTitle").textContent = "日期无效 / Invalid Date";
-      document.getElementById("resultText").textContent = "出生日期不能在未来。Date of birth cannot be in the future.";
-      document.getElementById("resultLink").style.display = "none";
-      document.getElementById("resultLinkZh").style.display = "none";
-      nextNote.style.display = "none";
-      zhNote.style.display = "none";
-      resultDiv.style.display = "block";
-      return;
-    }
-
-    var months = ageInMonths(dob, today);
-    document.getElementById("resultLink").style.display = "inline-block";
-    document.getElementById("resultLinkZh").style.display = "inline-block";
-    document.getElementById("resultLinkZh").href = CHINESE_PDF_URL;
-    document.getElementById("resultLink").href = ENGLISH_PDF_URL;
-
-    if (months < 2) {
-      document.getElementById("resultTitle").textContent = "孩子还不到2个月 / Your child is under 2 months old";
-      document.getElementById("resultText").textContent = "CDC的里程碑清单从2个月开始。以下是第一个清单，供您提前了解。The CDC checklists begin at 2 months. Here is the first checklist for reference.";
-      zhNote.style.display = "block";
-      document.getElementById("zhText").textContent = "中英文清单均为CDC官方PDF文件，包含所有年龄段。请在文件中查找「2个月」部分。Both the Chinese and English checklists above are single official CDC PDFs covering all ages. Please look for the \"2 Months / 2个月\" section inside whichever document you open.";
-      nextNote.style.display = "none";
-      resultDiv.style.display = "block";
-      return;
-    }
-
-    if (months > 60) {
-      document.getElementById("resultTitle").textContent = "孩子已超过5岁 / Your child is older than 5 years";
-      document.getElementById("resultText").textContent = "CDC的这套里程碑清单覆盖到5岁。以下链接为CDC \"Learn the Signs. Act Early.\" 项目主页，可查看更多资源。CDC's checklist series here goes up to age 5. The link below goes to the CDC's \"Learn the Signs. Act Early.\" program homepage for more resources.";
-      document.getElementById("resultLinkZh").href = "https://www.cdc.gov/act-early/index.html";
-      document.getElementById("resultLink").href = "https://www.cdc.gov/act-early/index.html";
-      zhNote.style.display = "none";
-      nextNote.style.display = "none";
-      resultDiv.style.display = "block";
-      return;
-    }
-
-    var current = CHECKPOINTS[0];
-    var next = null;
-    for (var i = 0; i < CHECKPOINTS.length; i++) {
-      if (CHECKPOINTS[i].months <= months) {
-        current = CHECKPOINTS[i];
-        next = CHECKPOINTS[i + 1] || null;
+    const TRANSLATIONS = {
+      en: {
+        title: "Child Developmental Milestone & Health Tracker",
+        subtitle: "CDC-aligned patient education tool for ages 0–5 years",
+        enterDob: "Enter your child's birthday:",
+        calculatedAge: "Your child is:",
+        years: "yr", months: "mo", days: "days old",
+        currentMilestone: "Current Developmental Milestone Target:",
+        viewCdcLink: "View Official CDC Milestone Checklist",
+        nextMilestone: "Next Developmental Milestone Target:",
+        nextWellVisit: "Your child's next well visit should be done at:",
+        vaccineNotice: "Childhood Immunization Schedule (0–6 Years):",
+        viewVaccineSchedule: "View Official CDC Vaccine Schedule",
+        newbornStage: "Newborn Care / Initial Birth Assessment",
+        allMilestonesCompleted: "Child has reached 5 years of age. Transitioning to early childhood wellness care.",
+        invalidDate: "Please enter a valid past birthdate.",
+        futureDateErr: "Birthdate cannot be in the future.",
+        disclaimer: "This tool does not provide medical diagnosis or advice. It links directly to the CDC's official \"Learn the Signs. Act Early.\" milestone checklists and the CDC's official child immunization schedule. Every child develops at their own pace; please talk to your pediatrician with any concerns."
+      },
+      zh: {
+        title: "儿童发育里程碑与健康体检追踪器",
+        subtitle: "基于美国 CDC 标准的 0-5 岁儿童健康教育工具",
+        enterDob: "请输入您的孩子的出生日期：",
+        calculatedAge: "您的孩子目前年龄：",
+        years: "岁", months: "个月", days: "天",
+        currentMilestone: "当前阶段发育里程碑目标：",
+        viewCdcLink: "查看 CDC 官方里程碑清单",
+        nextMilestone: "下一个阶段发育里程碑目标：",
+        nextWellVisit: "建议下一次儿童健康体检时间：",
+        vaccineNotice: "儿童免疫接种计划表 (0–6 岁)：",
+        viewVaccineSchedule: "查看 CDC 官方疫苗接种指南",
+        newbornStage: "新生儿护理 / 初生体检阶段",
+        allMilestonesCompleted: "孩子已满 5 周岁，已完成幼龄里程碑阶段，建议转入学龄前常规体检。",
+        invalidDate: "请输入有效的出生日期。",
+        futureDateErr: "出生日期不能晚于今天。",
+        disclaimer: "本工具不提供医疗诊断或建议，仅直接链接到CDC官方\"Learn the Signs. Act Early.\"发育里程碑清单，以及CDC官方儿童疫苗接种计划。每个孩子的发展速度不同，如有任何担忧请咨询儿科医生。"
       }
+    };
+
+    let currentLang = 'en';
+
+    // ----------------------------------------------------
+    // 2. LANGUAGE TOGGLE LOGIC
+    // ----------------------------------------------------
+    function setLanguage(lang) {
+      currentLang = lang;
+      const t = TRANSLATIONS[lang];
+
+      document.getElementById('ui-title').innerText = t.title;
+      document.getElementById('ui-subtitle').innerText = t.subtitle;
+      document.getElementById('ui-enter-dob').innerText = t.enterDob;
+      document.getElementById('ui-disclaimer').innerText = t.disclaimer;
+
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+
+      calculateMilestones(); // Re-render outputs in new language
     }
 
-    document.getElementById("resultTitle").textContent = "适用清单： " + current.label + " / Checklist: " + current.label;
-    document.getElementById("resultText").textContent =
-      "您孩子目前约 " + months + " 个月大。以下是最近一个适用的CDC官方里程碑清单。Your child is approximately " + months + " months old. Below is the most recent applicable official CDC milestone checklist.";
+    // ----------------------------------------------------
+    // 3. CALCULATION & RENDERING ENGINE
+    // ----------------------------------------------------
+    function calculateMilestones() {
+      const dobVal = document.getElementById('dob-input').value;
+      const resultsDiv = document.getElementById('results');
+      const t = TRANSLATIONS[currentLang];
 
-    zhNote.style.display = "block";
-    document.getElementById("zhText").textContent =
-      "中英文清单均为CDC官方PDF文件，包含所有年龄段。请在文件中查找「" + current.label.split(" / ")[0] + "」部分。Both the Chinese and English checklists above are single official CDC PDFs covering all ages. Please look for the \"" + current.label + "\" section inside whichever document you open.";
+      if (!dobVal) {
+        resultsDiv.style.display = 'none';
+        return;
+      }
 
-    if (next) {
-      document.getElementById("nextText").textContent =
-        "下一个里程碑检查点： " + next.label + "（" + (next.months - months) + " 个月后）。Next checkpoint: " + next.label + " (in " + (next.months - months) + " months).";
-      nextNote.style.display = "block";
-    } else {
-      nextNote.style.display = "none";
+      resultsDiv.style.display = 'flex';
+
+      const birthDate = new Date(dobVal + 'T00:00:00');
+      const today = new Date();
+
+      if (isNaN(birthDate.getTime())) {
+        resultsDiv.innerHTML = `<div class="error-box">${t.invalidDate}</div>`;
+        return;
+      }
+      if (birthDate > today) {
+        resultsDiv.innerHTML = `<div class="error-box">${t.futureDateErr}</div>`;
+        return;
+      }
+
+      // Age Math
+      let years = today.getFullYear() - birthDate.getFullYear();
+      let months = today.getMonth() - birthDate.getMonth();
+      let days = today.getDate() - birthDate.getDate();
+
+      if (days < 0) {
+        months -= 1;
+        const prevMonthLastDay = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+        days += prevMonthLastDay;
+      }
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      const totalMonths = (years * 12) + months + (days / 30.4375);
+
+      // Tier Mapping Logic
+      let currentTier, nextTier, wellVisit;
+
+      if (totalMonths < 2) {
+        currentTier = { label: t.newbornStage, url: MILESTONE_TIERS[0].cdcUrl[currentLang] };
+        nextTier = { label: MILESTONE_TIERS[0].label[currentLang], url: MILESTONE_TIERS[0].cdcUrl[currentLang] };
+        wellVisit = MILESTONE_TIERS[0].label[currentLang];
+      } else {
+        let index = -1;
+        for (let i = 0; i < MILESTONE_TIERS.length; i++) {
+          if (totalMonths >= MILESTONE_TIERS[i].months) index = i;
+          else break;
+        }
+        if (index === -1) index = 0;
+
+        const curr = MILESTONE_TIERS[index];
+        const nxt = MILESTONE_TIERS[index + 1] || null;
+
+        currentTier = { label: curr.label[currentLang], url: curr.cdcUrl[currentLang] };
+        nextTier = nxt
+          ? { label: nxt.label[currentLang], url: nxt.cdcUrl[currentLang] }
+          : { label: t.allMilestonesCompleted, url: MILESTONE_TIERS[MILESTONE_TIERS.length - 1].cdcUrl[currentLang] };
+        wellVisit = nxt ? nxt.label[currentLang] : (currentLang === 'zh' ? "5 岁" : "5 Years");
+      }
+
+      // Render HTML
+      resultsDiv.innerHTML = `
+        <div class="result-box age-box">
+          <div class="box-label">${t.calculatedAge}</div>
+          <div class="box-value">${years} ${t.years} ${months} ${t.months} ${days} ${t.days}</div>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">${t.currentMilestone}</div>
+          <div class="box-value">${currentTier.label}</div>
+          <a class="cdc-link" href="${currentTier.url}" target="_blank" rel="noopener noreferrer">${t.viewCdcLink} &rarr;</a>
+        </div>
+
+        <div class="result-box">
+          <div class="box-label">${t.nextMilestone}</div>
+          <div class="box-value">${nextTier.label}</div>
+          ${nextTier.url ? `<a class="cdc-link" href="${nextTier.url}" target="_blank" rel="noopener noreferrer">${t.viewCdcLink} &rarr;</a>` : ''}
+        </div>
+
+        <div class="result-box visit-box">
+          <div class="box-label">${t.nextWellVisit}</div>
+          <div class="box-value">${wellVisit}</div>
+        </div>
+
+        <div class="result-box vaccine-box">
+          <div>
+            <div class="box-label">${t.vaccineNotice}</div>
+          </div>
+          <a class="btn-vaccine" href="${CDC_VACCINE_URL}" target="_blank" rel="noopener noreferrer">${t.viewVaccineSchedule} &rarr;</a>
+        </div>
+      `;
     }
-
-    resultDiv.style.display = "block";
-  });
-</script>
-
-<footer>
-  © 2026 CareBridge Kids | 康桥儿童健康<br><br>
-  Educational Use Only | Disclaimer | 免责声明<br><br>
-  This website provides general pediatric health information for educational purposes only. It does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical concerns.<br><br>
-  本网站提供的内容仅用于儿童健康教育，不构成医疗建议、诊断或治疗。如有健康相关问题，请咨询专业医疗人员。
-</footer>
-
+  </script>
 </body>
 </html>
