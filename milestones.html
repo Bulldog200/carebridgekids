@@ -42,14 +42,14 @@
       display: inline-block;
       font-size: 0.8125rem;
       font-weight: 600;
-      color: var(--primary);
+      color: #ffffff;
       text-decoration: none;
-      background: #ffffff;
-      border: 1px solid var(--border-color);
+      background: #e8590c;
+      border: 1px solid #e8590c;
       padding: 8px 14px;
       border-radius: 8px;
     }
-    .back-link:hover { background: #eff6ff; }
+    .back-link:hover { background: #c2440a; border-color: #c2440a; }
 
     .dashboard-card {
       max-width: 600px;
@@ -208,18 +208,18 @@
     <!-- Header -->
     <div class="header-row">
       <div>
-        <h1 class="title" id="ui-title">Child Developmental Milestone & Health Tracker</h1>
-        <p class="subtitle" id="ui-subtitle">CDC-aligned patient education tool for ages 0–5 years</p>
+        <h1 class="title" id="ui-title">儿童发育里程碑与健康体检追踪器</h1>
+        <p class="subtitle" id="ui-subtitle">基于美国 CDC 标准的 0-5 岁儿童健康教育工具</p>
       </div>
       <div class="lang-switcher">
-        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
-        <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</button>
+        <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
       </div>
     </div>
 
     <!-- Date Input -->
     <div class="form-group">
-      <label class="form-label" id="ui-enter-dob" for="dob-input">Enter your child's birthday:</label>
+      <label class="form-label" id="ui-enter-dob" for="dob-input">请输入您的孩子的出生日期：</label>
       <input type="date" id="dob-input" class="date-input" onchange="calculateMilestones()">
     </div>
 
@@ -227,7 +227,7 @@
     <div id="results" class="results-container" style="display: none;"></div>
 
     <p class="disclaimer-note" id="ui-disclaimer">
-      This tool does not provide medical diagnosis or advice. It links directly to the CDC's official "Learn the Signs. Act Early." milestone checklists and the CDC's official child immunization schedule. Every child develops at their own pace; please talk to your pediatrician with any concerns.
+      本工具不提供医疗诊断或建议，仅直接链接到CDC官方"Learn the Signs. Act Early."发育里程碑清单，以及CDC官方儿童疫苗接种计划。每个孩子的发展速度不同，如有任何担忧请咨询儿科医生。
     </p>
   </div>
 
@@ -320,7 +320,7 @@
       }
     };
 
-    let currentLang = 'en';
+    let currentLang = 'zh';
 
     // ----------------------------------------------------
     // 2. LANGUAGE TOGGLE LOGIC
