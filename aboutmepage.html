@@ -24,32 +24,48 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f3f4f6; }
 
-    .top-band {
+    .site-header {
       background: #1a365d;
-      height: 80px;
-      width: 100%;
+      color: #ffffff;
+      padding: 20px 20px 16px;
+      text-align: center;
+    }
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .site-nav a {
+      color: #ffffff;
+      background: #e8590c;
+      text-decoration: none;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border: 1px solid #e8590c;
+      border-radius: 14px;
+      transition: background 0.2s;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .site-nav a:hover {
+      background: #c2440a;
+      border-color: #c2440a;
     }
 
     .page-content {
       padding: 20px;
     }
 
-    .back-bar-wrap {
-      max-width: 700px;
-      margin: 0 auto 16px;
-    }
-    .back-link {
-      display: inline-block;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: #ffffff;
-      text-decoration: none;
-      background: #e8590c;
-      border: 1px solid #e8590c;
-      padding: 8px 14px;
-      border-radius: 8px;
-    }
-    .back-link:hover { background: #c2440a; border-color: #c2440a; }
+
 
     .dashboard-card {
       max-width: 700px;
@@ -110,13 +126,19 @@
 </head>
 <body>
 
-  <div class="top-band"></div>
+  <header class="site-header">
+    <h1 class="site-title">康桥儿童健康 | CareBridge Kids</h1>
+    <nav class="site-nav">
+      <a href="index.html">首页 Home</a>
+      <a href="VIS.html">疫苗信息 Vaccine</a>
+      <a href="locator.html">查找医疗 Find Care</a>
+      <a href="milestones.html">儿童发展 Child Development</a>
+      <a href="aboutmepage.html">关于我们 About Us</a>
+    </nav>
+  </header>
 
   <div class="page-content">
 
-  <div class="back-bar-wrap">
-    <a href="index.html" class="back-link">← 返回首页 Back to Home</a>
-  </div>
 
   <div class="dashboard-card">
     <div class="header-row">
